@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
+        # The get_queryset() method of a manager returns the QuerySet that will be executed. You override this method to include your custom filter in the final QuerySet
         return super().get_queryset().filter(status='published')
 
 
@@ -27,16 +28,20 @@ class Post(models.Model):
     status = models.CharField(max_length=10,
                               choices=STATUS_CHOICES,
                               default='draft')
-
-    objects = models.Manager() # The default manager.
-    published = PublishedManager() # Our custom manager.
+    # retreives using Post.objects.all()
+    objects = models.Manager() # The default manager tof every model that retrieves all objects in the database
+    # retreives using Post.published.all()
+    published = PublishedManager() # Our custom manager to retreive all posts with published status
 
     class Meta:
+        '''order by published date from latest'''
         ordering = ('-publish',)
+        
 
     def __str__(self):
         return self.title
 
+    #convention in Django is to add a get_absolute_url() method to the model that returns the canonical URL for the object.
     def get_absolute_url(self):
         return reverse('blog:post_detail',
                        args=[self.publish.year,

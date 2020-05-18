@@ -13,6 +13,7 @@
     <p class="date">
       Published {{ post.publish }} by {{ post.author }}
     </p>
+    <!-- used to truncate the words to provide a shorter summary -->
     {{ post.body|truncatewords:30|linebreaks }}
   {% endfor %}
   {% include "pagination.html" with page=page_obj %}
