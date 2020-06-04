@@ -1,3 +1,0 @@
-SuperUser Credentials
-    username: adan
-    password: CradleHome

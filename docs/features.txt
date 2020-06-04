@@ -1,6 +1,0 @@
-Features:
-    1. Blog
-    2. Notes
-    3. Professional Portfoilio
-    4. Personal Projects
-    5. SOTA Admin Interface
