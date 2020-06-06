@@ -18,6 +18,10 @@ body{
     background-size: cover;
 }
 
+section{
+    padding: 6rem;
+}
+
 a{
     text-decoration: none;
     color: #eee;
@@ -34,6 +38,61 @@ img{
 /*End global*/
 
 /*Start reusable*/
+
+.container{
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-heading{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.section-heading h1{
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, .3);
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.section-heading h1::before,
+.section-heading h1::after{
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.section-heading h1::before{
+    width: 10rem;
+    height: 3px;
+    border-radius: .8rem;
+}
+
+.section-heading h1::after{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    bottom: -1.1rem;
+}
+
+.section-heading h6{
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.has-margin-right{
+    margin-right: 5rem;
+}
 /*End reusable*/
 
 
@@ -147,8 +206,8 @@ header{
 }
 
 .landing-text h1{
-    font-size: 20rem;
-    font-family: 'Piedra', cursive;
+    font-size: 10rem;
+    font-family: 'Piedra', cursive , sans-serif;;
     background: linear-gradient(to top, #ffe838, #fd57df);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -157,6 +216,7 @@ header{
 }
 
 .landing-text h6{
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 2rem;
     font-weight: 300;
 
@@ -195,15 +255,116 @@ header{
 
 .about-details{
     flex: 1;
-    
+}
+
+.social-media{
+    margin-top: 5rem;
+}
+
+.social-media i{
+    font-size: 5rem;
+    transition: color 650ms;
+}
+
+.fa-facebook-square:hover{
+    color: #4267b2;
+}
+
+.fa-twitter-square:hover{
+    color: #38a1f3;
+}
+
+.fa-dribbble-square:hover{
+    color: #ea4c89;
 }
 
 /*End about*/
 
 /*Start services*/
+
+.my-skills{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    text-align: center;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skill h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2rem 0;
+}
+
+.icon-container{
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #ffe838;
+    background-color: #fd57bf;
+    margin-bottom: 2rem;
+    display: flex;
+    transform: rotate(45deg);
+}
+
+.icon-container i{
+    color: #ffe838;
+    font-size: 5rem;
+    margin: auto;
+    transform: rotate(-45deg);
+}
 /*End services*/
 
 /*Start portfolio*/
+
+.portfolio-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.portfolio-item:last-child{
+    margin-bottom: 0;
+}
+
+.profile-img{
+    width: 50rem;
+    flex: 1;
+}
+
+.portfolio-description{
+}
+
+.portfolio-description h1{
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+.portfolio-description h6{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: .3;
+}
+
+.portfolio-description .cta{
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text
+}
+
+
+
 /*End services*/
 
 /*Start timeline*/
