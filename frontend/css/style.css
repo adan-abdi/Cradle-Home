@@ -19,7 +19,7 @@ body{
 }
 
 section{
-    padding: 6rem;
+    padding: 6rem 0;
 }
 
 a{
@@ -107,22 +107,23 @@ header{
     height: 100vh;
     position: fixed;
     top: -100vh;
+    left: 70rem;
     z-index: 50;
     background-color: #16162d;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
+    /* border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%; */
     transition: all 650ms cubic-bezier(1,0,0,1,);
 }
 
 .nav-list{
     list-style: none;
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-
 
 .li{
     margin: 0 2rem;
@@ -497,6 +498,7 @@ input[type="submit"]:hover{
     border-radius: 100%;
     display: flex;
     animation: pulse 1s infinite;
+    cursor: pointer;
 }
 
 .up i{
@@ -526,4 +528,108 @@ input[type="submit"]:hover{
 /*End animations*/
 
 /*Start media queries*/
+
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    body{
+        background: url("../imgs/sitebg2.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .top-nav{
+        left: 8rem;
+        width: 30;
+    }
+
+    .landing-text h1{
+        font-size: 7rem;
+    }
+
+    .landing-text h6{
+        font-size: 2rem;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+
+    li{
+        margin: 2rem 0 ;
+    }
+
+    .nav-link{
+        font-size: 4.5rem;
+    }
+
+    .about-heading h1{
+        font-size: 8rem;
+    }
+
+    .section-heading h1{
+        font-size: 3rem;
+    }
+
+    .about-details .nav-list{
+        flex-direction: initial;
+    }
+
+    .about-details li{
+        margin: 0 2rem;
+    }
+
+    .icon-container{
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .icon-container i{
+        font-size: 4rem;
+    }
+
+    .timeline ul{
+        margin: 0 0 0 auto;
+    }
+
+    .timeline .date::before{
+        top: 3rem;
+        left: -20rem;
+    }
+
+    .timeline .date::after{
+        left: -6rem;
+    }
+}
+
+/* moblie */
+@media screen and (max-width: 600px) {
+
+    .top-nav{
+        left: 8rem;
+    }
+    
+    .menu-toggler{
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .landing-text h1{
+        font-size: 5rem;
+    }
+
+    .landing-text h6{
+        font-size: 1rem;
+    }
+
+    .nav-list li{
+        flex-direction: inherit;
+    }
+
+    .nav-link{
+        font-size: 3.5rem;
+    }
+}
+
+
+
 /*End media queries*/
