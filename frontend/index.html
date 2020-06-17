@@ -45,51 +45,57 @@
 <body>
 
     <!--Navbar -->
-        <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1 fixed">
+        <nav class="navbar_fixed mb-5 navbar navbar-expand-lg navbar-dark orange lighten-1 fixed">
             <div class="container">
-                <a class="navbar-brand" href="#"><strong>Portfolio</strong></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
-                aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-                    <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"><strong>Home</strong><span class="sr-only">(current)</span></a>
-                        </li>
+                <div class="row">
+                    <ul class="nav-start navbar-nav ml-auto nav-flex-icons p-1">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><strong>About</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><strong>services</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><strong>portfolio</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><strong>blog</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-warning btn-sm text-light" href="#"><strong>Contact Me</strong></a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item avatar px-2">
-                            <a class="nav-link p-0" href="#">
+                            <a class="nav-link p-0 nav-item avatar px-2" href="#">
                                 <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
                                 alt="avatar image" height="35">
                             </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="#"><strong>Portfolio</strong></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+                            aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+                    <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
+                        <li class="nav-item active m-2">
+                            <a class="nav-link" href="#"><strong>Home</strong><span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="#"><strong>About</strong></a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="#"><strong>services</strong></a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="#"><strong>portfolio</strong></a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="#"><strong>blog</strong></a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link btn btn-outline-warning btn-md bg-white  waves-effect" href="#"><strong>Contact Me</strong></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <br>
+        <br>
   <!--/.Navbar -->
 
 
     <!--  ======================= Start Main Area ================================ -->
     <main class="site-main">
-
         <section id="top" class="px-3 py-5 bg-light">
             <div class="container">
                 <!--  ======================= Start Banner Area =======================  -->
@@ -106,22 +112,21 @@
                             </div>
                             <div class="col-lg-8 col-md-12 my-2">
                                 <div class="card card-body h-100">
-                                    <h4>Some heading about me</h4>
+                                    <h4 class="text-center">Software Developer & Junior Data Scientist</h4>
                                     <hr>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur accusantium, quidem omnis error dolorum odio itaque facilis ipsum similique dignissimos aperiam expedita ex hic blanditiis officiis? Architecto sint dolorum praesentium.</p>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, rerum. Corrupti hic sint perspiciatis alias commodi. Nostrum incidunt impedit maxime?</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quas adipisci quia maxime consectetur odio.</p>
-                                    
+                                    <div class="site-buttons">
+                                        <div class="d-flex flex-row flex-wrap">
+                                                <button class="text-uppercase text-white btn btn-warning "><i class="fas fa-user-shield mr-1"></i> <strong>Hire Me</strong></button>
+                                                <button class="text-uppercase  btn btn-outline-warning "><i class="fas fa-phone-alt mr-1"></i> <strong>+254-723-073552</strong></button>
+                                                <button class="text-uppercase  btn btn-outline-warning "><i class="fas fa-file-pdf  mr-1"></i> <strong>Get Resume</strong></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="site-buttons">
-                            <div class="d-flex flex-row flex-wrap">
-                                <button type="button" class="btn btn-warning btn-lg text-light mr-4 text-uppercase">hire
-                                    me</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg  text-uppercase">Get Resume</button>
-                            </div>
-                        </div>
+                        
                     </div>
                 </section>
             <!--  ======================= End Banner Area =======================  -->
@@ -150,8 +155,10 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum iure obcaecati vel
                                 possimus officia maiores perferendis ut! Quos, perspiciatis.
                             </p>
+                            <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit impedit dolore totam, dignissimos ipsum dolor ab vel illo sapiente officia?</p>
+                            <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit impedit dolore totam, dignissimos ipsum dolor ab vel illo sapiente officia?</p>
                         </div>
-                        <button type="button" class="btn btn-warning btn-md text-light mr-4 text-uppercase"><strong>Download Resume</strong></button>
+                        <button class="text-uppercase text-white btn-lg btn btn-warning "><i class="far fa-file-pdf fa-2x mr-1"></i> <strong>Download Resume</strong></button>
                     </div>
                 </div>
             </div>
@@ -216,24 +223,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                        <div class="experience-area">
-                            <div class="d-flex flex-row years-area">
-                                <h2 class="p-3 years">10</h2>
-                                <h2>
-                                    <span>Years</span>
-                                    <span>Experience</span>
-                                    <span>Working</span>
-                                </h2>
-                            </div>
-                            <div class="d-flex flex-row flex-wrap call-area">
-                                <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
-                                <div class="call-now">
-                                    <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
-                                    <span class="font-roboto py-2">(+91)-800-555-4986</span>
+                    <div class="card card-body col-lg-6 height">
+                        <div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="experience-area">
+                                <div class="d-flex flex-row years-area">
+                                    <h2 class="p-3 years">
+                                        <span><i class="fa fa-bug fa-3x "></i></span>
+                                    </h2>
+                                    <h2>
+                                        <span>Frameworks,</span>
+                                        <span>& Technology</span>
+                                        <span>Stack</span>
+                                    </h2>
                                 </div>
+                                <div class="d-flex flex-row call">
+                                    <div class="">
+                                       <button class="text-uppercase  btn btn-outline-warning "><i class="fas fa-phone-alt mr-1"></i> <strong>+254-723-073552</strong></button>
+                                        <span class="py-2 px-1"><h4><strong>Call Now</strong></h4></span>
+                                    </div>
+                                </div>
+                                <div class="bg-panel"></div>
                             </div>
-                            <div class="bg-panel"></div>
                         </div>
                     </div>
                 </div>
@@ -247,7 +257,7 @@
 
         <!--  ====================== Start Services Area =============================  -->
 
-        <section class="services-area">
+        <section id="top" class="services-area bg-light">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center services-title">
@@ -260,22 +270,7 @@
                 </div>
                 <div class="container services-list">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="services">
-                                <div class="sevices-img text-center py-4">
-                                    <img src="./img/services/s1.png" alt="Services-1">
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>
-                                    <p class="card-text text-secondary">
-                                        Some quick example text to build on the card
-                                        title and make up
-                                        the bulk of the card's content.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12 h-100">
                             <div class="services">
                                 <div class="sevices-img text-center py-4">
                                     <img src="./img/services/s2.png" alt="Services-2">
@@ -286,17 +281,19 @@
                                         Some quick example text to build on the card
                                         title and make up
                                         the bulk of the card's content.
+                                        title and make up
+                                        rsg
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12 h-100">
                             <div class="services">
                                 <div class="sevices-img text-center py-4">
-                                    <img src="./img/services/s3.png" alt="Services-3">
+                                    <img src="./img/services/s1.png" alt="Services-1">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">web design</h5>
+                                    <h5 class="card-title text-uppercase font-roboto">Web development</h5>
                                     <p class="card-text text-secondary">
                                         Some quick example text to build on the card
                                         title and make up
@@ -305,13 +302,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12 h-100">
+                            <div class="services">
+                                <div class="sevices-img text-center py-4">
+                                    <img src="./img/services/s3.png" alt="Services-3">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">mobile development</h5>
+                                    <p class="card-text text-secondary">
+                                        Some quick example text to build on the card
+                                        title and make up
+                                        the bulk of the card's content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 h-100">
                             <div class="services">
                                 <div class="sevices-img text-center py-4">
                                     <img src="./img/services/s4.png" alt="Services-4">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">seo optimize</h5>
+                                    <h5 class="card-title text-uppercase font-roboto">Data Science Project</h5>
                                     <p class="card-text text-secondary">
                                         Some quick example text to build on the card
                                         title and make up
@@ -332,137 +344,161 @@
         <section class="project-area container">
             <div class="container ">
                 <div class="project-title pb-5">
-                    <h1 class="text-uppercase title-h1">Recently Done Project</h1>
-                    <h1 class="text-uppercase title-h1">Quality Work</h1>
+                    <h1 class="text-uppercase h3 text-center">Recently Done Projects</h1>
                 </div>
 
-                <div class="button-group">
-                    <button type="button" class="active" id="btn1" data-filter="*">All</button>
-                    <button type="button" data-filter=".popular">Popular</button>
-                    <button type="button" data-filter=".latest">Latest</button>
-                    <button type="button" data-filter=".following">Following</button>
-                    <button type="button" data-filter=".upcoming">Upcoming</button>
-                </div>
-
-                <div class="row grid">
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p1.jpg">
-                                    <img src="./img/portfolio/p1.jpg" alt="portfolio-1" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Minimul Desing</h4>
-                                <span class="text-secondary">Latest, Portfolio</span>
-                            </div>
+                <div class="card text-center">
+                    <div class="card-header h3">
+                        <div class="button-group pb-2 ">
+                            <button type="button" class="text-dark text-capitalize active" id="btn1" data-filter="*">All</button>
+                            <button type="button" class="text-dark text-capitalize" data-filter=".popular">Web</button>
+                            <button type="button" class="text-dark text-capitalize" data-filter=".latest">Mobile</button>
+                            <button type="button" class="text-dark text-capitalize" data-filter=".following">UX/UI</button>
+                            <button type="button" class="text-dark text-capitalize" data-filter=".upcoming">Data Projects</button>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p2.jpg">
-                                    <img src="./img/portfolio/p2.jpg" alt="portfolio-2" class="img-fluid">
-                                </a>
+                    <div class="card-body">
+                        <div class="row grid">
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item latest">
+                                <div class="card card-body p-2 ">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p1.jpg">
+                                                <img src="./img/portfolio/p1.jpg" alt="portfolio-1" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Minimul Desing</h4>
+                                            <span class="text-secondary">Latest, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Paint Wall</h4>
-                                <span class="text-secondary">Popular, Portfolio</span>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item popular">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p2.jpg">
+                                                <img src="./img/portfolio/p2.jpg" alt="portfolio-2" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Paint Wall</h4>
+                                            <span class="text-secondary">Popular, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item popular">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p3.jpg">
+                                                <img src="./img/portfolio/p3.jpg" alt="portfolio-3" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Female light</h4>
+                                            <span class="text-secondary">Popular, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item upcoming">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p4.jpg">
+                                                <img src="./img/portfolio/p4.jpg" alt="portfolio-4" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Fourth Air</h4>
+                                            <span class="text-secondary">Upcoming, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item upcoming">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p5.jpg">
+                                                <img src="./img/portfolio/p5.jpg" alt="portfolio-5" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Muliple fown</h4>
+                                            <span class="text-secondary">Upcoming, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item following">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p6.jpg">
+                                                <img src="./img/portfolio/p6.jpg" alt="portfolio-6" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Together sign</h4>
+                                            <span class="text-secondary">Following, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item following">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p7.jpg">
+                                                <img src="./img/portfolio/p7.jpg" alt="portfolio-7" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Green Heaven</h4>
+                                            <span class="text-secondary">Following, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item following">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p8.jpg">
+                                                <img src="./img/portfolio/p8.jpg" alt="portfolio-8" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Fly Male</h4>
+                                            <span class="text-secondary">Following, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 element-item upcoming">
+                                <div class="card card-body p-2">
+                                    <div class="our-project">
+                                        <div class="img">
+                                            <a class="test-popup-link" href="./img/portfolio/p9.jpg">
+                                                <img src="./img/portfolio/p9.jpg" alt="portfolio-9" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="title py-4">
+                                            <h4 class="text-capitalize">Camera Lens</h4>
+                                            <span class="text-secondary">Upcoming, Portfolio</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p3.jpg">
-                                    <img src="./img/portfolio/p3.jpg" alt="portfolio-3" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Female light</h4>
-                                <span class="text-secondary">Popular, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p4.jpg">
-                                    <img src="./img/portfolio/p4.jpg" alt="portfolio-4" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Fourth Air</h4>
-                                <span class="text-secondary">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p5.jpg">
-                                    <img src="./img/portfolio/p5.jpg" alt="portfolio-5" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Muliple fown</h4>
-                                <span class="text-secondary">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p6.jpg">
-                                    <img src="./img/portfolio/p6.jpg" alt="portfolio-6" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Together sign</h4>
-                                <span class="text-secondary">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p7.jpg">
-                                    <img src="./img/portfolio/p7.jpg" alt="portfolio-7" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Green Heaven</h4>
-                                <span class="text-secondary">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p8.jpg">
-                                    <img src="./img/portfolio/p8.jpg" alt="portfolio-8" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Fly Male</h4>
-                                <span class="text-secondary">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./img/portfolio/p9.jpg">
-                                    <img src="./img/portfolio/p9.jpg" alt="portfolio-9" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Camera Lens</h4>
-                                <span class="text-secondary">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    
+                  </div>
             </div>
         </section>
 
@@ -557,10 +593,10 @@
         <!--  ========================== Subscribe me Area ============================  -->
         <section class="subscribe-us-area">
             <div class="container">
-                <div class="container subscribe">
+                <div class="card card-body orange container subscribe">
                     <div class="row">
                         <div class="col-lg-12 text-center subscribe-title">
-                            <h4 class="text-uppercase">Get Update From anywhere</h4>
+                            <h4 class="text-uppercase">Get Updates from My Blog</h4>
                             <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
                                 consequuntur.</p>
                         </div>
@@ -569,11 +605,11 @@
                         <form class="w-50">
                             <div class="row d-flex flex-row flex-wrap">
                                 <div class="col input-textbox">
-                                    <input type="text" id="txtemail" class="form-control" placeholder="Email">
+                                    <input placeholder="Email" id="txtemail" type="text" class="form-control text-white btn btn-outline-white waves-effect text-lowercase">
                                 </div>
                                 <div class="col">
                                     <div class="btn-submit">
-                                        <button type="submit" class="btn btn-success float-right">Subscribe</button>
+                                        <button type="submit" class="text-white float-right btn btn-outline-white waves-effect">Subscribe</button>
                                     </div>
                                 </div>
                             </div>
@@ -598,29 +634,51 @@
                 <br>
                 <div class="social text-center">
                     <h5 class="text-uppercase">Follow me</h5>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-reddit-alien"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
                 </div>
                 <div class="copyrights text-center">
                     <p class="para">
                         Copyright ©2020 All rights reserved |
-                        <a href="#"><span style="color: var(--primary-color);">Abdi Adan</span></a>
+                        <a href="#"><span style="color: #ffa726;">Abdi Adan</span></a>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div class="social-icons">
-        <a id="twc" class="si btn-lg btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a>
-        <a id="lic" class="si btn-lg btn-li text-primary" type="button" role="button"><i class="fab fa-linkedin-in"></i></a>
-        <a id="git" class="si btn-lg btn-git" type="button" role="button"><i class="fab fa-github"></i></a>
-        <a id="redd" class="si btn-lg btn-reddit" type="button" role="button"><i class="fab fa-reddit-alien"></i></a>
-        <a id="twc" class="si inst btn-lg btn-ins" type="button" role="button"><i class="fab fa-instagram"></i></a>
-        <a id="twc" class="si em btn-lg btn-email" type="button" role="button"><i class="fas fa-envelope"></i></a>
+    <div class="social-icons social-menu">
+        <ul>
+            <li class="p-2"><a class="si btn-lg btn-li" type="button" role="button"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+            <li class="p-2"><a class="si btn-lg btn-git" type="button" role="button"><i class="fab fa-github"></i></a></li>
+            <li class="p-2"><a class="si btn-lg btn-tw" type="button" role="button"><i class="fab fa-twitter"></i></a></li>
+            <li class="p-2"><a class="si inst btn-lg btn-ins" type="button" role="button"><i class="fab fa-instagram"></i></a></li>
+            <li class="p-2"><a class="si em btn-lg btn-email" type="button" role="button"><i class="fas fa-envelope-open-text"></i></a></li>
+        </ul>
     </div>
+
+    <button id="to-top">
+        <i class="fab fa-fly fa-3x"></i>
+    </button>
+
+    <script>
+        const toTop = document.querySelector("#to-top");
+        toTop.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
+        });
+    </script>
+
+
+
+    
 
     <!-- mdbootstrap cdn scripts -->
     <!-- JQuery -->

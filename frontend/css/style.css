@@ -15,7 +15,31 @@ body{
    padding: 0; 
 }
 
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 0px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffa726), to(#f47f07));
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .25), inset -2px -2px -2px rgba(0,0,0, .25);
+}
+
+::-webkit-scrollbar-track{
+    background: white;
+}
+/* end scroll bar */
+
 /* start navigation */ 
+
+.nav-start{
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
 .header_area .main-menu .navbar .navbar-brand{
     padding: 0 1rem 0 5rem;
@@ -29,7 +53,6 @@ body{
     font-size: 1rem;
     text-transform: uppercase;
     padding: 1.7rem;
-    color: var(--title-color);
 }
 
 .header_area .main-menu .navbar-nav .active a{
@@ -56,7 +79,7 @@ body{
 }
 
 #top{
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 #profile-pic{
@@ -125,7 +148,7 @@ body{
 /* Start Brand Area */ 
 
 .site-main .brand-area{
-    padding: 1rem 20rem;
+    padding: 1rem 10rem;
     margin-bottom: 4rem;
 }
 
@@ -170,7 +193,7 @@ body{
     background: url(../img/client-info-bg.png) no-repeat 45px 20px;
     padding: 2rem 0;
     width: 40rem;
-    height: 18rem;
+    height: 15rem;
     padding-left: 8rem;
     position: relative;
 }
@@ -178,25 +201,38 @@ body{
 .site-main .brand-area .experience-area .bg-panel{
     position: absolute;
     left: -190px; top: 0%;
-    background: #e029290a;
-    width: 400px;
-    height: 400px;
-    margin-left: 340px;
+    background: #ffa726;
+    width: 200px;
+    height: 200px;
+    margin-left: 300px;
     z-index: -1;
 }
 
+.height{
+    height: 400px;
+}
+
+.call{
+    color: #ffa726;
+}
+
+.num{
+    display: inline;
+}
+
 .site-main .brand-area .experience-area .years-area .years{
-    font: normal bold 84px/40px var(--roboto);
-    color: var(--primary-color2);
+    font: normal bold 84px/40px;
+    color: #ffa726;
     z-index: 2;
+    font-size: 2rem;
 }
 
 .site-main .brand-area .experience-area .years-area h2 > span{
-    font: normal 600 22px/30px var(--roboto);
+    font: normal 600 22px/30px;
 }
 
 .site-main .brand-area .experience-area .call-area{
-    padding-left: 10rem;
+    padding-left: 1rem;
 }
 
 /* End Brand Area */ 
@@ -216,7 +252,7 @@ body{
 }
 
 .site-main > .services-area .services{
-    background: rgba(248, 252, 253, 0.973);
+    background: rgba(247, 237, 163, 0.7);
     padding: 2rem 1rem;
     width: 16rem;
     margin: 5rem .5rem;
@@ -235,13 +271,13 @@ body{
 /* Project Area */ 
 
 .site-main .project-area{
-    padding: 4rem 0;
+    padding: 1rem 0;
 }
 
 .site-main .project-area .button-group button{
     background: transparent;
     border: none;
-    font: normal 500 16px/130px var(--roboto);
+    font: normal 500 16px/130px;
     text-transform: uppercase;
 }
 
@@ -250,7 +286,7 @@ body{
 }
 
 .site-main .project-area .grid .our-project > .title h4{
-    font: normal 700 25px/12px var(--roboto);
+    font: normal 700 25px/12px;
 }
 
 .site-main .project-area .grid .our-project .img a:hover img{
@@ -296,7 +332,7 @@ body{
 }
 
 .site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
-    background: var(--primary-color);
+    background: #ffa726;
     width: 12px;
     height: 12px;
 }
@@ -308,7 +344,6 @@ body{
 /* Subscribe me */ 
 
 .site-main .subscribe-us-area .subscribe{
-    background: url(../img/subscribe-bg.png) no-repeat;
     padding: 5rem 0;
     margin: 3rem auto;
 }
@@ -324,9 +359,9 @@ body{
 }
 
 .site-main .subscribe-us-area .subscribe form .input-textbox input{
-    width: 300px;
+    width: 400px;
     padding: 1.5rem 1rem;
-    border: 1px solid whitesmoke;
+    border: none;
     background: transparent;
     color: white;
     font: normal 500 17px/20px;
@@ -358,11 +393,11 @@ footer.footer-area .social h5{
 footer.footer-area .social a > i{
     font-size:22px;
     padding: 2rem;
-    color: var(--border-color);
+    color: #ffa726;
 }
 
 footer.footer-area .social a:hover > i{
-    color: var(--primary-color);
+    color: black;
 }
 
 
@@ -386,22 +421,98 @@ footer.footer-area .social a:hover > i{
     cursor: pointer;
 }
 
-#twc{
-    color: #1c9ceb;
+.social-menu ul li{
+    list-style: none;
+    margin: 0 0;
 }
 
-#lic{
-    color: #0073af;
+.social-menu ul li .fab {
+    font-size: 20px;
+    line-height: 40px;
+    transition: .6s;
+    color: #000;
+    
 }
 
-#redd{
-    color: #f74101;
+.social-menu ul li .fab:hover{
+    color: #fff;
 }
 
-#inst{
-    color: #7d32aa;
+.social-menu ul li .fas:hover{
+    color: #fff;
 }
 
-#em{
-    color: #c73535;
+.social-menu ul li .fas {
+    font-size: 20px;
+    line-height: 40px;
+    transition: .3s;
+    color: #000;
+    justify-content: center;
+    text-align: center;
 }
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .3s;
+    justify-content: center;
+    box-shadow: 0 5px 4px rgba(0,0,0, 0.3);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(-8px, 0);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #0077B5;
+}
+
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #131418;
+}
+
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #55acee;
+}
+
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #e4405f;
+}
+
+.social-menu ul li:nth-child(5) a:hover{
+    background-color: #dd4b39;
+}
+
+#to-top{
+    outline: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#to-top .fab{
+    color: #ffa726;
+}
+
+#to-top .fab:active{
+    color: #fff;
+}
+
+#to-top:active{
+    background: #f47f07;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+}
+
