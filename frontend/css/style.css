@@ -808,9 +808,13 @@ footer.footer-area .social a:hover > i{
     background-color: #eee;
     align-items: center;
     justify-content: center;
+    display: flex;
+    padding: 0 1.5rem;
 }
 
 .blog-post{
+    border: none;
+    outline: none;
     left: 10rem;
     max-height: 100%;
     max-height: 15rem;
@@ -819,23 +823,22 @@ footer.footer-area .social a:hover > i{
     max-width: 100%;
     padding: 5rem;
     background-color: white;
-    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
+    box-shadow: 0 .4rem 2rem rgba(0, 0, 0, .2);
     display: flex;
+    box-sizing: border-box;
     align-items: center;
+    justify-content: center;
     border-radius: 1rem;
 }
 
 .blgo-post-img{
-    top: 5rem;
-    min-width: 25rem;
-    max-width: 25rem;
+    top: 7rem;
     transform: translateX(-25rem);
     position: relative;
 }
 
 .blgo-post-img img{
     width: 50%;
-    height: 50%;
     object-fit: cover;
     display: block;
     border-radius: 1rem;
@@ -846,16 +849,19 @@ footer.footer-area .social a:hover > i{
     width: 50%;
     height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
     border-radius: 1rem;
     background: linear-gradient(to right, rgba(255, 168, 0, .2), rgba(255, 164, 0, .3));
     box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, .35);
 }
 
 .blog-post-info{
-    align-items: center;
-    justify-content: center;
+    display: block;
+    border-radius: 10px;
+    top: -5rem;
+    margin: 0  2rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
 }
 
 .blog-post-date span{
@@ -869,19 +875,18 @@ footer.footer-area .social a:hover > i{
 .blog-post-title{
     font-weight: 600;
     font-size: 25px;
-    margin: 3.5px  3rem;
+    margin: 0  3rem;
     text-transform: capitalize;
     color: rgba(255, 168, 0, 1);
 }
 
 .blog-post-text{
-    margin: 1.5px  3rem;
-    font-size: 15;
+    margin: 0  3rem;
     font-weight: 500;
 }
 
 .blog-post-cta{
-    margin: 1.5px  3rem;
+    margin: 0  3rem;
 }
 /* end of blog list view page */
 
