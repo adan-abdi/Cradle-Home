@@ -84,3 +84,14 @@
 
 
 }
+
+@media screen and (max-width:800px) {
+    .contact-info{
+      flex-direction: column;
+    }
+    .con-card{
+      width: 100%;
+      max-width: 300px;
+      margin: 10px 0;
+    }
+}
