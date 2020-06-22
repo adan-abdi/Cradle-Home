@@ -45,7 +45,7 @@
 <body>
 
     <!--Navbar -->
-        <nav class="navbar_fixed mb-5 navbar navbar-expand-lg navbar-dark orange lighten-1">
+        <nav class="navbar_fixed mb-5 navbar navbar-expand-lg navbar-dark orange">
             <div class="container">
                 <div class="row">
                     <ul class="nav-start navbar-nav ml-auto nav-flex-icons p-1">
@@ -64,28 +64,34 @@
                             </button>
                         </li>
                     </ul>
+                    <div class="search mx-5 nav-item d-flex">
+                        <input type="text" class="text-capitalize text-center card" name="box" placeholder="Search my blog posts...">
+                        <div class="card text-dark btn btn-search">
+                            <a href="#"><i class="nav-item fa fa-search"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
                     <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
-                        <li class="nav-item active m-2">
-                            <a class="nav-link btn btn-sm waves-effect" href="Index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
+                        <li class="nav-item mx-2 my-4 ">
+                            <a class="nav-link waves-effect " href="Index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 my-4">
                             <a class="nav-link waves-effect" href="#"><strong>Services</strong></a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 my-4">
                             <a class="nav-link waves-effect" href="#"><strong>About</strong></a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 my-4">
                             <a class="nav-link waves-effect" href="timeline.html"><strong>timeline</strong></a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 my-4">
                             <a class="nav-link waves-effect" href="./blog-detail.html"><strong>portfolio</strong></a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 my-4">
                             <a class="nav-link waves-effect" href="./blog-list.html"><strong>blog</strong></a>
                         </li>
-                        <li class="nav-item m-2">
+                        <li class="nav-item m-2 my-3">
                             <div class="btn-submit">
                                 <button type="submit" class="waves-effect text-white float-right btn btn-md  btn-outline-white waves-effect">Contact me</button>
                             </div>
@@ -94,8 +100,6 @@
                 </div>
             </div>
         </nav>
-        <br>
-        <br>
   <!--/.Navbar -->
 
     <!--  ======================= Start Main Area ================================ -->
@@ -125,7 +129,7 @@
                                         <div class="d-flex flex-row flex-wrap">
                                                 <button class="text-uppercase text-white btn btn-warning "><i class="fas fa-user-shield mr-1"></i> <strong>Hire Me</strong></button>
                                                 <button class="text-uppercase  btn btn-outline-warning "><i class="fas fa-phone-alt mr-1"></i> <strong>+254-723-073552</strong></button>
-                                                <button class="text-uppercase  btn btn-outline-warning "><i class="fas fa-file-pdf  mr-1"></i> <strong>Get Resume</strong></button>
+                                                <button class="text-uppercase text-white btn btn-warning "><i class="far fa-file-pdf mr-2"></i> <strong>Download Resume</strong></button>
                                         </div>
                                     </div>
                                 </div>
@@ -582,7 +586,7 @@
     <!-- end of contact me -->
         <!--  ======================== About Me Area ==============================  -->
     <main class="site-main">
-        <section class="about-area bg-light my-5">
+        <section class="about-area my-5">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-12">
@@ -598,7 +602,7 @@
             </div>
 
             <div class="container carousel py-lg-5">
-                <div class="owl-carousel owl-theme card">
+                <div class="owl-carousel owl-theme">
                     <div class="client row">
                         <div class="col-lg-4 col-md-12 client-img">
                             <img src="./img/testimonials/t1.jpg" alt="img1" class="img-fluid">

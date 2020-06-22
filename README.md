@@ -8,13 +8,15 @@
 * [x] Personal Blog Detail Page
 * [ ] Projects List Page
 * [ ] Projects Detail Page
+* [ ] Why Choose Us Section
+* [ ] Stack Section
 * [-] Accessibility Features
 * [x] Scroll To Top Button
-* [ ] Dark/Light Mode Switch toggle on Navbar
 * [x] Social Icons Left Hover
 * [x] Custom Sidebar
-* [ ] Blog Search input bar
+* [x] Blog Search input bar
 * [ ] Internationalization and Translation?
+* [ ] Dark/Light Mode Switch toggle on Navbar
 
 ## Backend Features
 
