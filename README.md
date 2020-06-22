@@ -4,11 +4,11 @@
 
 * [x] Personal Portfolio Landing Page
 * [x] Project Timeline Page
-* [ ] Personal Blog List Page
-* [ ] Personal Blog Detail Page
+* [x] Personal Blog List Page
+* [x] Personal Blog Detail Page
 * [ ] Projects List Page
 * [ ] Projects Detail Page
-* [ ] Accessibility Features
+* [-] Accessibility Features
 * [x] Scroll To Top Button
 * [ ] Dark/Light Mode Switch toggle on Navbar
 * [x] Social Icons Left Hover
@@ -18,7 +18,7 @@
 
 ## Backend Features
 
-* [ ] Custom Admin Interface
+* [x] Custom Admin Interface
 * [ ] Blog Backends Standard
 * [ ] Blod Advanced Features - Comments, Email Shairing, Tags, Filter
 * [ ] Portfolio Projects Backends- UX/UI, Web, Mobile, Data Science
