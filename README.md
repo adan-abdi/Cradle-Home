@@ -1,5 +1,7 @@
 # Personal Website
 
+![Logo](https://user-images.githubusercontent.com/53440762/85415182-adce4900-b575-11ea-9f10-5ea1803c849b.png)
+
 ## FrontEnd-Features
 
 * [x] Personal Portfolio Landing Page
