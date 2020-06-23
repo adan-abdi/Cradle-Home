@@ -6,6 +6,7 @@
 * [x] Project Timeline Page
 * [x] Personal Blog List Page
 * [x] Personal Blog Detail Page
+* [x] Add Favicon
 * [ ] Projects List Page
 * [ ] Projects Detail Page
 * [ ] Why Choose Us Section
