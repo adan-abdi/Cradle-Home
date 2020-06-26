@@ -2,8 +2,9 @@
 
 ## Features
 
-* [ ] Portfolio Homepage
+* [x] Portfolio Homepage
 * [ ] Portfolio Projects timeline, project list and detail views
+* [x] Standard Blog
 * [ ] Advanced Blog
 * [ ] Appointment scheduler chatbot to interact with my customers
 * [ ] Advanced Series-Structured blog
@@ -21,7 +22,7 @@
 * [ ] Projects List Page
 * [ ] Projects Detail Page
 * [ ] Why Choose Us Section
-* [ ] Stack Section
+* [x] Stack Section
 * [ ] Customize Images
 * [-] Accessibility Features
 * [x] Scroll To Top Button
@@ -35,7 +36,7 @@
 
 * [x] Custom Admin Interface
 * [x] Blog Backends Standard
-* [ ] Blod Advanced Features - Comments, Email Shairing, Tags, Filter
+* [ ] Blog Advanced Features - Comments, Email Shairing, Tags, Filter
 * [ ] Portfolio Projects Backends- UX/UI, Web, Mobile, Data Science
 * [ ] Timeline Backends
 * [ ] Web Caching
@@ -43,7 +44,7 @@
 ## Deployment Timeline
 
 * [x] Deploy to git pages
-* [ ] Deploy to Heroku as a test Platform
+* [x] Deploy to Heroku as a test Platform
 * [ ] Buy Custom Domain
 * [ ] Deploy to Google Cloud Platform under free tier (GCP)
 * [ ] 🚀Going Live!
