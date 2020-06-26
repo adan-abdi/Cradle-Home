@@ -25,7 +25,7 @@ SECRET_KEY = '3z-31mpkx+1a-c-61@+=p&3r$kj15hrf*jzh+mb*3c+h9^g@lx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cradle-home.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
