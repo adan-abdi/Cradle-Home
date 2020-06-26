@@ -1,6 +1,15 @@
 # Personal Website
 
-![Logo](https://user-images.githubusercontent.com/53440762/85415182-adce4900-b575-11ea-9f10-5ea1803c849b.png)
+## Features
+
+* [ ] Portfolio Homepage
+* [ ] Portfolio Projects timeline, project list and detail views
+* [ ] Advanced Blog
+* [ ] Appointment scheduler chatbot to interact with my customers
+* [ ] Advanced Series-Structured blog
+* [ ] ToDo App
+* [ ] ToDo app with Calendar
+* [ ] Add something similar to goals, milestones and bucketlists - Series-structured?
 
 ## FrontEnd-Features
 
@@ -25,7 +34,7 @@
 ## Backend Features
 
 * [x] Custom Admin Interface
-* [ ] Blog Backends Standard
+* [x] Blog Backends Standard
 * [ ] Blod Advanced Features - Comments, Email Shairing, Tags, Filter
 * [ ] Portfolio Projects Backends- UX/UI, Web, Mobile, Data Science
 * [ ] Timeline Backends
@@ -36,4 +45,5 @@
 * [x] Deploy to git pages
 * [ ] Deploy to Heroku as a test Platform
 * [ ] Buy Custom Domain
+* [ ] Deploy to Google Cloud Platform under free tier (GCP)
 * [ ] 🚀Going Live!
