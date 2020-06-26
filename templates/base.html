@@ -1,12 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdi Adan | Base</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block title %} <title>Abdi Adan</title> {% endblock %}
+    
 
     <!-- favicon -->
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" sizes="64x64">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" sizes="64x64">
 
     <!-- mdbootstrap css cdn -->
     <!-- Font Awesome -->
@@ -20,28 +25,31 @@
 
 
     <!--  Bootstrap css file  -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
     <!--  font awesome icons  -->
-    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
 
 
     <!--  Magnific Popup css file  -->
-    <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="{% static 'vendor/Magnific-Popup/dist/magnific-popup.css' %}">
 
 
     <!--  Owl-carousel css file  -->
-    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.theme.default.min.css' %}">
 
 
     <!--  custom css file  -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!--  Responsive css file  -->
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 </head>
+
+
 <body>
+
 
     <!--Navbar -->
     <nav class="navbar_fixed mb-5 navbar navbar-expand-lg navbar-dark orange">
@@ -49,14 +57,14 @@
             <div class="row">
                 <ul class="nav-start navbar-nav ml-auto nav-flex-icons p-1">
                     <li class="nav-item">
-                        <a class="nav-link p-0 nav-item avatar px-2" href="#">
+                        <a class="nav-link p-0 nav-item avatar px-2" href="">
                             <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
                             alt="avatar image" height="35">
                         </a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="navbar-brand" href="./base.html"><strong>Portfolio</strong></a>
+                        <a class="navbar-brand" href=""><strong>Portfolio</strong></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
                         aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -73,7 +81,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
                 <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
                     <li class="nav-item mx-2 my-4 ">
-                        <a class="nav-link waves-effect " href="Index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
+                        <a class="nav-link waves-effect " href=""><strong>Home</strong><span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item m-2 my-4">
                         <a class="nav-link waves-effect" href="#"><strong>Services</strong></a>
@@ -82,13 +90,13 @@
                         <a class="nav-link waves-effect" href="#"><strong>About</strong></a>
                     </li>
                     <li class="nav-item m-2 my-4">
-                        <a class="nav-link waves-effect" href="timeline.html"><strong>timeline</strong></a>
+                        <a class="nav-link waves-effect" href="timeline/"><strong>timeline</strong></a>
                     </li>
                     <li class="nav-item m-2 my-4">
-                        <a class="nav-link waves-effect" href="./blog-detail.html"><strong>portfolio</strong></a>
+                        <a class="nav-link waves-effect" href="blogdetail/"><strong>portfolio</strong></a>
                     </li>
                     <li class="nav-item m-2 my-4">
-                        <a class="nav-link waves-effect" href="./blog-list.html"><strong>blog</strong></a>
+                        <a class="nav-link waves-effect" href="blog/"><strong>blog</strong></a>
                     </li>
                     <li class="nav-item m-2 my-3">
                         <div class="btn-submit">
@@ -99,10 +107,13 @@
             </div>
         </div>
     </nav>
-<!--/.Navbar -->
+    <br>
+    <!--/.Navbar -->
 
 
-    <section id="top"></section>
+    {% block content %}
+
+    {% endblock %}
 
     
     
@@ -110,7 +121,7 @@
 
 
 
-
+    <!-- side social buttons -->
     <div class="social-icons social-menu">
         <ul>
             <li class="p-2"><a class="si btn-lg btn-li" type="button" role="button"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
@@ -120,15 +131,20 @@
             <li class="p-2"><a class="si em btn-lg btn-email" type="button" role="button"><i class="fas fa-envelope-open-text"></i></a></li>
         </ul>
     </div>
+    <!-- end side social buttons -->
 
+
+    <!-- to top button -->
     <button id="to-top">
         <i class="fab fa-fly fa-3x"></i>
     </button>
+    <!-- end to top button -->
 
+
+    <!-- footer area -->
     <div class="curved-div">
         <div class="curved-div">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L30,293.3C60,299,120,309,180,309.3C240,309,300,299,360,245.3C420,192,480,96,540,96C600,96,660,192,720,197.3C780,203,840,117,900,69.3C960,21,1020,11,1080,42.7C1140,75,1200,149,1260,192C1320,235,1380,245,1410,250.7L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
-        <!-- footer area -->
             <footer class="footer-area">
                 <div class="container">
                     <div class="">
@@ -152,8 +168,10 @@
             </footer>
         </div>
     </div>
+    <!-- end footer area -->
 
 
+    <!-- to top button -->
     <script>
         const toTop = document.querySelector("#to-top");
         toTop.addEventListener("click", function() {
@@ -164,6 +182,7 @@
             });
         });
     </script>
+    <!-- end to top button -->
 
 
 
@@ -180,21 +199,22 @@
 
 
     <!--  Jquery js file  -->
-    <script src="./js/jquery.3.4.1.js"></script>
+    <script src="{% static 'js/jquery.3.4.1.js' %}"></script>
 
     <!--  Bootstrap js file  -->
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     <!--  isotope js library  -->
-    <script src="./vendor/isotope/isotope.min.js"></script>
+    <script src="{% static 'vendor/isotope/isotope.min.js' %}"></script>
 
     <!--  Magnific popup script file  -->
-    <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="{% static 'vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js' %}"></script>
 
     <!--  Owl-carousel js file  -->
-    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="{% static 'vendor/owl-carousel/js/owl.carousel.min.js' %}"></script>
 
     <!--  custom js file  -->
-    <script src="./js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
 </body>
 </html>
