@@ -920,3 +920,20 @@ footer.footer-area .social a:hover > i {
   color: orange;
 }
 /* end of nav search-bar */
+
+
+/* Projects section */
+.project-section{
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero{
+  width: 80%;
+  position: relative;
+  margin: 100px auto;
+}
+
+
+/* End of Projects section */
