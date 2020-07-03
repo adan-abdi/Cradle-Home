@@ -16,19 +16,23 @@
 * [ ] Why Choose Us Section
 * [x] Stack Section
 * [ ] Customize Images
-* [-] Accessibility Features
+* Accessibility Features
 * [x] Scroll To Top Button
 * [x] Social Icons Left Hover
 * [x] Custom Sidebar
 * [x] Blog Search input bar
-* [ ] Dark/Light Mode Switch toggle on Navbar
 
 ## Backend Features
 
-* [x] Custom Admin Interface
+* [x] Custom Admin Interface (Django)
+* [x] Customizing Admin Interface
 * [x] Blog Backends Standard
 * [ ] Blog Advanced Features - Comments, Email Shairing, Tags, Filter
 * [ ] Web Caching
+* [ ] SiteMap and SEO
+* [ ] Blog Search
+* [ ] Contact Me
+* [ ] Blog Newsletter
 
 ## Deployment Timeline
 
