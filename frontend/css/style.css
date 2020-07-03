@@ -249,13 +249,59 @@ body {
   padding-left: 1rem;
 }
 
+/* stacks */
+
+.html5 {
+  background-color: #df4b25;
+  color: white;
+}
+
+.css3 {
+  background-color: #264de4;
+  color: white;
+}
+
+.js {
+  background-color: #f0db4f;
+  color: #323330;
+}
+
+.bootstrap {
+  background-color: #080135;
+  color: #602c50;
+}
+
+.react {
+  background-color: #20232a;
+  color: #61dbfb;
+}
+
 .python {
   background-color: #215562;
-  color: #f8cf37;
+  color: #ffd43b;
 }
 
 .django {
-  background-color: #092d1f;
+  background-color: #092e20;
+  color: white;
+}
+
+.heroku{
+  background-color: purple;
+  color: white;
+}
+
+.postgres{
+  background-color: #0036a3;
+}
+
+.xd {
+  background-color: #2e001f;
+  color: white;
+}
+
+.flutter {
+  background-color: #1389fd;
   color: white;
 }
 
@@ -264,19 +310,17 @@ body {
   color: white;
 }
 
-.flutter {
-  background-color: #075b9a;
+.api{
+  background-color: black;
   color: white;
 }
 
-.boot {
-  background-color: #7952b3;
-  color: purple;
+.gcp{
+  background-color: whitesmoke;
 }
 
-.react {
-  background-color: #20232a;
-  color: white;
+.git{
+  background-color: #ea4e2e;
 }
 
 .sci {
@@ -284,60 +328,21 @@ body {
   color: white;
 }
 
-.xd {
-  background-color: #2e001f;
-  color: white;
-}
-
-.tf {
-  background-color: #ff6e00;
-  color: white;
-}
-
-.html5 {
-  background-color: #df4b25;
-  color: white;
-}
-
-.css3 {
-  background-color: #244bdd;
-  color: white;
-}
-
-.js {
-  background-color: #f8d800;
-  color: white;
-}
-
-.pd {
-  background-color: #215562;
-  color: white;
-}
-
-.mtl {
-  background-color: #115379;
-  color: white;
-}
-
-.npy {
-  background-color: #7b89c9;
-  color: white;
-}
 
 .jp {
-  background-color: #f08332;
+  background-color: white;
   color: white;
 }
+/* end of stacks */
 
-.nlp {
-  background-color: #4e5848;
-  color: white;
-}
 
-.ai {
-  background-color: #594124;
-  color: white;
-}
+
+
+
+
+
+
+
 /* End Brand Area */
 
 /* Services Area */

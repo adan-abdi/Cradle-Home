@@ -1,18 +1,18 @@
 1. HTML
 2. CSS
 3. JS
-4. React
-5. Bootstrap
+4. Bootstrap
+5. React
 6. Python
 7. Django
 8. Heroku
-9. PostgreSQL
-10. MySQL
+9. SQL
+10. AdobeXd
 11. Flutter
 12. Dart
 13. Firebase
 14. APIs
 15. GCP
-16. Heroku
+16. Git
 17. SciKit Learn
-18. Git
+18. Jupyter
