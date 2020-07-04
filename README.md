@@ -13,9 +13,12 @@
 * [x] Personal Blog List Page
 * [x] Personal Blog Detail Page
 * [x] Add Favicon
-* [ ] Why Choose Us Section
 * [x] Stack Section
 * [ ] Customize Images
+* [x] Why Choose Us Section
+* [ ] Responsive Design
+* [ ] Refactor
+
 * Accessibility Features
 * [x] Scroll To Top Button
 * [x] Social Icons Left Hover
@@ -33,11 +36,12 @@
 * [ ] Blog Search
 * [ ] Contact Me
 * [ ] Blog Newsletter
+* [ ] Featured Projects backends
 
 ## Deployment Timeline
 
-* [x] Deploy to git pages
-* [x] Deploy to Heroku as a test Platform
+* [x] Deploy frontend to git pages
+* [ ] Deploy to Heroku as a test Platform
 * [ ] Buy Custom Domain
 * [ ] Deploy to Google Cloud Platform under free tier (GCP)
 * [ ] 🚀Going Live!
