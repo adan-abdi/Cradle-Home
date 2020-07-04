@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     let $btns = $('.project-area .button-group button');
-    
+
 
     $btns.click(function (e) {
 

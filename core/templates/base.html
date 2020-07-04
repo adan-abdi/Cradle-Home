@@ -2,54 +2,56 @@
 
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% block title %} <title>Abdi Adan</title> {% endblock %}
     
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% block title %} <title>Abdi Adan</title> {% endblock %}
+        <!-- favicon -->
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" sizes="64x64">
     
-
-    <!-- favicon -->
-    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" sizes="64x64">
-
-    <!-- mdbootstrap css cdn -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
-
-
-    <!--  Bootstrap css file  -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-    <!--  font awesome icons  -->
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
-
-
-    <!--  Magnific Popup css file  -->
-    <link rel="stylesheet" href="{% static 'vendor/Magnific-Popup/dist/magnific-popup.css' %}">
-
-
-    <!--  Owl-carousel css file  -->
-    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.theme.default.min.css' %}">
-
-
-    <!--  custom css file  -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    <!--  Responsive css file  -->
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-</head>
-
-
+        <!-- Import Bootstrap Grid -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css">
+    
+        <!-- Import Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+        <!-- mdbootstrap css cdn -->
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    
+    
+        <!--  Bootstrap css file  -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+        <!--  font awesome icons  -->
+        <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    
+    
+        <!--  Magnific Popup css file  -->
+        <link rel="stylesheet" href="{% static 'vendor/Magnific-Popup/dist/magnific-popup.css' %}">
+    
+    
+        <!--  Owl-carousel css file  -->
+        <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.theme.default.min.css' %}">
+    
+    
+        <!--  custom css file  -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+        <!--  Responsive css file  -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    
+    </head>
 <body>
-
 
     <!--Navbar -->
     <nav class="navbar_fixed mb-5 navbar navbar-expand-lg navbar-dark orange">
@@ -57,14 +59,14 @@
             <div class="row">
                 <ul class="nav-start navbar-nav ml-auto nav-flex-icons p-1">
                     <li class="nav-item">
-                        <a class="nav-link p-0 nav-item avatar px-2" href="">
+                        <a class="nav-link p-0 nav-item avatar px-2" href="#">
                             <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
                             alt="avatar image" height="35">
                         </a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="navbar-brand" href=""><strong>Portfolio</strong></a>
+                        <a class="navbar-brand" href="#"><strong>Portfolio</strong></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
                         aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -81,16 +83,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
                 <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
                     <li class="nav-item mx-2 my-4 ">
-                        <a class="nav-link waves-effect " href=""><strong>Home</strong><span class="sr-only">(current)</span></a>
+                        <a class="nav-link waves-effect " href="#"><strong>Home</strong><span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item m-2 my-4">
-                        <a class="nav-link waves-effect" href="projects/"><strong>Projects</strong></a>
-                    </li>
-                    <li class="nav-item m-2 my-4">
-                        <a class="nav-link waves-effect" href="timeline/"><strong>timeline</strong></a>
-                    </li>
-                    <li class="nav-item m-2 my-4">
-                        <a class="nav-link waves-effect" href="blog-detail/"><strong>Blog-Detail</strong></a>
+                        <a class="nav-link waves-effect" href="blog-detail/"><strong>blog detail</strong></a>
                     </li>
                     <li class="nav-item m-2 my-4">
                         <a class="nav-link waves-effect" href="blog/"><strong>blog</strong></a>
@@ -104,21 +100,18 @@
             </div>
         </div>
     </nav>
-    <br>
     <!--/.Navbar -->
 
-
+    
     {% block content %}
 
     {% endblock %}
 
-    
-    
 
 
 
 
-    <!-- side social buttons -->
+    <!-- side hover social icons -->
     <div class="social-icons social-menu">
         <ul>
             <li class="p-2"><a class="si btn-lg btn-li" type="button" role="button"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
@@ -128,14 +121,15 @@
             <li class="p-2"><a class="si em btn-lg btn-email" type="button" role="button"><i class="fas fa-envelope-open-text"></i></a></li>
         </ul>
     </div>
-    <!-- end side social buttons -->
+    <!-- end of side hover social icons -->
 
 
-    <!-- to top button -->
+
+    <!-- scroll to top button -->
     <button id="to-top">
         <i class="fab fa-fly fa-3x"></i>
     </button>
-    <!-- end to top button -->
+    <!-- end of scroll to top button -->
 
 
     <!-- footer area -->
@@ -165,10 +159,10 @@
             </footer>
         </div>
     </div>
-    <!-- end footer area -->
+    <!-- end of footer area -->
 
 
-    <!-- to top button -->
+    <!-- to top js -->
     <script>
         const toTop = document.querySelector("#to-top");
         toTop.addEventListener("click", function() {
@@ -179,7 +173,7 @@
             });
         });
     </script>
-    <!-- end to top button -->
+    <!-- end of to top js -->
 
 
 
