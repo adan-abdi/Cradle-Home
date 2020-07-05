@@ -37,6 +37,7 @@
 * [ ] Contact Me
 * [ ] Blog Newsletter
 * [ ] Featured Projects backends
+* [ ] Testimonial backends
 
 ## Deployment Timeline
 
