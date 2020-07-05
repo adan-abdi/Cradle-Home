@@ -7,15 +7,21 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
+    # data to be passed to context
+    # profile details, featured projects, filter latest articles=3, contact me, testimonials, blog newsletter list
     context = {}
     return render(request, 'index.html', context)
 
 
 def blog(request):
+    # data to be passed
+    # blog newsletter, Blog-list/Posts,
     context = {}
     return render(request, 'blog-list.html', context)
 
 def blogdetail(request):
+    # data to be passed to context
+    # Profile, Blog newsletter, tags, related articles Blog details; BannerImg, Meta, Content, Comments, Reply form
     context = {}
     return render(request, 'blog-detail.html', context)
 

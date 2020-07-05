@@ -585,9 +585,13 @@ footer.footer-area .social a:hover > i {
 }
 
 .social-menu ul li:nth-child(5) a:hover {
-  background-color: #dd4b39;
+  background-color: #0077b5;
 }
 
+/* end of social icons */
+
+
+/* scroll to top button */
 #to-top {
   outline: none;
   position: fixed;
@@ -624,6 +628,8 @@ footer.footer-area .social a:hover > i {
   background: #f47f07;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
 }
+
+/* end of scroll to top button */
 
 .curved-div {
   background: #ff9800;
