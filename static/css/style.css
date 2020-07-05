@@ -1103,3 +1103,10 @@ footer.footer-area .social a:hover > i {
     transform: translate3d(0, -2px, 0);
   }
 }
+
+/* paginations */
+.pag{
+  align-items: center;
+  justify-content: center;
+}
+/* paginations */

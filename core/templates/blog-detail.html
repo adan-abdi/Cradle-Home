@@ -29,9 +29,8 @@
                         <div class="card mb-4 wow fadeIn">
                             <!--Card content-->
                             <div class="card-body text-center">
-                                <p class="h3 my-4"><strong>Blog Title and meta details card</strong></p>
-                                <p>MDB is world's most popular Material Design framework for building responsive, mobile-first
-                                    websites and apps.</p>
+                                <p class="h3 my-4"><strong>{{post.title}}</strong></p>
+                                <p>Published {{ post.publish }} by {{ post.author }}</p>
                             </div>
                         </div>
                         <!-- End of Blog title and meta-->
@@ -58,25 +57,7 @@
                         <div class="card mb-4 wow fadeIn">
                             <!--Card content-->
                             <div class="card-body">
-                                <p class="h5 my-4">1. That's a very long heading </p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sapiente necessitatibus dolores possimus sint animi quisquam, beatae rerum in aut, sed mollitia earum ut eaque. Provident blanditiis sint optio nihil laborum ab accusamus in vitae culpa itaque, quibusdam error doloribus accusantium nam libero id a. In sapiente facere, error maiores voluptates rerum odio non necessitatibus libero, corporis dolorem amet saepe accusantium ipsum distinctio cumque numquam itaque cupiditate esse facilis illum adipisci optio? Repudiandae quia quos nisi beatae sunt id aspernatur sequi ullam, excepturi nulla harum nobis! Cum, quia perspiciatis? Fugiat ratione minus sint aperiam voluptas? Sapiente, odio! Architecto, omnis commodi.</p>
-
-                                <p class="h5 my-4">2. That's a very long heading </p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sapiente necessitatibus dolores possimus sint animi quisquam, beatae rerum in aut, sed mollitia earum ut eaque. Provident blanditiis sint optio nihil laborum ab accusamus in vitae culpa itaque, quibusdam error doloribus accusantium nam libero id a. In sapiente facere, error maiores voluptates rerum odio non necessitatibus libero, corporis dolorem amet saepe accusantium ipsum distinctio cumque numquam itaque cupiditate esse facilis illum adipisci optio? Repudiandae quia quos nisi beatae sunt id aspernatur sequi ullam, excepturi nulla harum nobis! Cum, quia perspiciatis? Fugiat ratione minus sint aperiam voluptas? Sapiente, odio! Architecto, omnis commodi.</p>
-
-                                <p class="h5 my-4">3. That's a very long heading </p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sapiente necessitatibus dolores possimus sint animi quisquam, beatae rerum in aut, sed mollitia earum ut eaque. Provident blanditiis sint optio nihil laborum ab accusamus in vitae culpa itaque, quibusdam error doloribus accusantium nam libero id a. In sapiente facere, error maiores voluptates rerum odio non necessitatibus libero, corporis dolorem amet saepe accusantium ipsum distinctio cumque numquam itaque cupiditate esse facilis illum adipisci optio? Repudiandae quia quos nisi beatae sunt id aspernatur sequi ullam, excepturi nulla harum nobis! Cum, quia perspiciatis? Fugiat ratione minus sint aperiam voluptas? Sapiente, odio! Architecto, omnis commodi.</p>
-
-                                <p class="h5 my-4">4. That's a very long heading </p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sapiente necessitatibus dolores possimus sint animi quisquam, beatae rerum in aut, sed mollitia earum ut eaque. Provident blanditiis sint optio nihil laborum ab accusamus in vitae culpa itaque, quibusdam error doloribus accusantium nam libero id a. In sapiente facere, error maiores voluptates rerum odio non necessitatibus libero, corporis dolorem amet saepe accusantium ipsum distinctio cumque numquam itaque cupiditate esse facilis illum adipisci optio? Repudiandae quia quos nisi beatae sunt id aspernatur sequi ullam, excepturi nulla harum nobis! Cum, quia perspiciatis? Fugiat ratione minus sint aperiam voluptas? Sapiente, odio! Architecto, omnis commodi.</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, ut rerum deserunt corporis
-                                    ducimus at, deleniti ea alias dolor reprehenderit sit vel. Incidunt id illum doloribus,
-                                    consequuntur maiores sed eligendi.</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, ut rerum deserunt corporis
-                                    ducimus at, deleniti ea alias dolor reprehenderit sit vel. Incidunt id illum doloribus,
-                                    consequuntur maiores sed eligendi.</p>
+                                <p>{{ post.body|linebreaks }}</p>
                             </div>
                         </div>
                         <!-- End of Body-->

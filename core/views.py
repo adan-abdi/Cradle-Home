@@ -19,7 +19,7 @@ def post_list(request):
     # request parameter is required by all views
     # retrieve all the posts with the published status using the published manager 
     object_list = Post.published.all()
-    paginator = Paginator(object_list, 9) # 9 posts in each page
+    paginator = Paginator(object_list, 3) # 3 posts in each page
     # get the page GET parameter, which indicates the current page number
     page = request.GET.get('page')
     try:
@@ -51,5 +51,5 @@ def post_detail(request, year, month, day, post):
 class PostListView(ListView):
     queryset = Post.published.all()
     context_object_name = 'posts'
-    paginate_by = 9
+    paginate_by = 3
     template_name = 'blog-list.html'
