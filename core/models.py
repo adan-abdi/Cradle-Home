@@ -25,7 +25,10 @@ class Post(models.Model):
     # author defines a many-to-one relationship with posts. When deleted all related posts are deleted due to the SQL standard CASCADE. The name of the reverse relationship from user to post with related_name attr to allow access of related objects easily
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     # TODO: Post body, split to Intro, Body and Conclusion Later
+    # Add banner Image
+    intro = models.TextField()
     body = models.TextField()
+    conclusion = models.TextField()
     # timezone.now is like a timezone aware version of datetime.now method.
     publish = models.DateTimeField(default=timezone.now)
     # by default, posts create date are started form the moment an instance of post is created
