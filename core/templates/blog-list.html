@@ -86,215 +86,53 @@
       <!--Main layout-->
     </div>
 
-        <!-- articles section -->
+        <!-- post list section -->
         <section id="articles" class="viewport">
           <div class="container ">
               <section class="blogs">
                   <div class="container">
                     <div class="row">
-                      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                        <div class="card card-body p-2 h-100 post">
-                            <div class="our-project mx-1">
-                                <div class="img img-wrapper">
-                                    <a class="">
-                                        <img src="{% static 'img/img1.jpg' %}" alt="portfolio-8" class="img-fluid">
-                                    </a>
-                                    <div class="likes">
-                                        <span class="heart">
-                                                <i class="fas fa-heart"></i> 382
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="content-wrapper">
-                                    <h3 class="title">Django or Node.js?</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestiae a hic in velit neque nobis recusandae ex!</p>
-                                </div>
-                                <div class="comments-readmore justify-contents-center align-items-center">
-                                    <a href=""><button class="text-capitalize text-white btn orange">Read</button></a>
-                                    <div class="comments">
-                                        <span><i class="fas fa-comment-alt"></i></span>
-                                        <span class="comment-count">382</span>
-                                        <span class="text">comments</span>
-                                    </div>
-                                    <div class="readmore">
-                                        <div class="dot dot1"></div>
-                                        <div class="dot dot2"></div>
-                                        <div class="dot dot3"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                        <div class="card card-body p-2 h-100 post">
-                            <div class="our-project mx-1">
-                                <div class="img img-wrapper">
-                                    <a class="">
-                                        <img src="{% static 'img/img2.jpg' %}" alt="portfolio-8" class="img-fluid">
-                                    </a>
-                                    <div class="likes">
-                                        <span class="heart">
-                                                <i class="fas fa-heart"></i> 221
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="content-wrapper">
-                                    <h3 class="title">Web Dev in focus</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestiae a hic in velit neque nobis recusandae ex!</p>
-                                </div>
-                                <div class="comments-readmore justify-contents-center align-items-center">
-                                    <a href=""><button class="text-capitalize text-white btn orange">Read</button></a>
-                                    <div class="comments">
-                                        <span><i class="fas fa-comment-alt"></i></span>
-                                        <span class="comment-count">212</span>
-                                        <span class="text">comments</span>
-                                    </div>
-                                    <div class="readmore">
-                                        <div class="dot dot1"></div>
-                                        <div class="dot dot2"></div>
-                                        <div class="dot dot3"></div>
+                        {% for post in posts %}
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                                <div class="card card-body p-2 h-100 post">
+                                    <div class="our-project mx-1">
+                                        <div class="img img-wrapper">
+                                            <a class="">
+                                                <img src="{% static 'img/img1.jpg' %}" alt="portfolio-8" class="img-fluid">
+                                            </a>
+                                            <div class="likes">
+                                                <span class="heart">
+                                                        <i class="fas fa-heart"></i> 382
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <h3 class="title">{{ post.title }}</h3>
+                                            <p>Published {{ post.publish }} by {{ post.author }}</p>
+                                            <p>{{ post.body|truncatewords:20|linebreaks }}</p>
+                                        </div>
+                                        <div class="comments-readmore justify-contents-center align-items-center">
+                                            <a href="{{ post.get_absolute_url }}"><button class="text-capitalize text-white btn orange">Read</button></a>
+                                            <div class="comments">
+                                                <span><i class="fas fa-comment-alt"></i></span>
+                                                <span class="comment-count">382</span>
+                                                <span class="text">comments</span>
+                                            </div>
+                                            <div class="readmore">
+                                                <div class="dot dot1"></div>
+                                                <div class="dot dot2"></div>
+                                                <div class="dot dot3"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                          <div class="card card-body p-2 h-100 post">
-                              <div class="our-project mx-1">
-                                  <div class="img img-wrapper">
-                                      <a class="">
-                                          <img src="{% static 'img/img3.jpg' %}" alt="portfolio-8" class="img-fluid">
-                                      </a>
-                                      <div class="likes">
-                                          <span class="heart">
-                                                  <i class="fas fa-heart"></i> 382
-                                          </span>
-                                      </div>
-                                  </div>
-                                  <div class="content-wrapper">
-                                      <h3 class="title">Future of AI</h3>
-                                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestiae a hic in velit neque nobis recusandae ex!</p>
-                                  </div>
-                                  <div class="comments-readmore justify-contents-center align-items-center">
-                                      <a href=""><button class="text-capitalize text-white btn orange">Read</button></a>
-                                      <div class="comments">
-                                          <span><i class="fas fa-comment-alt"></i></span>
-                                          <span class="comment-count">382</span>
-                                          <span class="text">comments</span>
-                                      </div>
-                                      <div class="readmore">
-                                          <div class="dot dot1"></div>
-                                          <div class="dot dot2"></div>
-                                          <div class="dot dot3"></div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                        <div class="card card-body p-2 h-100 post">
-                            <div class="our-project mx-1">
-                                <div class="img img-wrapper">
-                                    <a class="">
-                                        <img src="{% static 'img/img2.jpg' %}" alt="portfolio-8" class="img-fluid">
-                                    </a>
-                                    <div class="likes">
-                                        <span class="heart">
-                                                <i class="fas fa-heart"></i> 382
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="content-wrapper">
-                                    <h3 class="title">Future of AI</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestiae a hic in velit neque nobis recusandae ex!</p>
-                                </div>
-                                <div class="comments-readmore justify-contents-center align-items-center">
-                                    <a href=""><button class="text-capitalize text-white btn orange">Read</button></a>
-                                    <div class="comments">
-                                        <span><i class="fas fa-comment-alt"></i></span>
-                                        <span class="comment-count">382</span>
-                                        <span class="text">comments</span>
-                                    </div>
-                                    <div class="readmore">
-                                        <div class="dot dot1"></div>
-                                        <div class="dot dot2"></div>
-                                        <div class="dot dot3"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                      <div class="card card-body p-2 h-100 post">
-                          <div class="our-project mx-1">
-                              <div class="img img-wrapper">
-                                  <a class="">
-                                      <img src="{% static 'img/img3.jpg' %}" alt="portfolio-8" class="img-fluid">
-                                  </a>
-                                  <div class="likes">
-                                      <span class="heart">
-                                              <i class="fas fa-heart"></i> 382
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="content-wrapper">
-                                  <h3 class="title">Future of AI</h3>
-                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestiae a hic in velit neque nobis recusandae ex!</p>
-                              </div>
-                              <div class="comments-readmore justify-contents-center align-items-center">
-                                  <a href=""><button class="text-capitalize text-white btn orange">Read</button></a>
-                                  <div class="comments">
-                                      <span><i class="fas fa-comment-alt"></i></span>
-                                      <span class="comment-count">382</span>
-                                      <span class="text">comments</span>
-                                  </div>
-                                  <div class="readmore">
-                                      <div class="dot dot1"></div>
-                                      <div class="dot dot2"></div>
-                                      <div class="dot dot3"></div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                    <div class="card card-body p-2 h-100 post">
-                        <div class="our-project mx-1">
-                            <div class="img img-wrapper">
-                                <a class="">
-                                    <img src="{% static 'img/img2.jpg' %}" alt="portfolio-8" class="img-fluid">
-                                </a>
-                                <div class="likes">
-                                    <span class="heart">
-                                            <i class="fas fa-heart"></i> 382
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="content-wrapper">
-                                <h3 class="title">Future of AI</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestiae a hic in velit neque nobis recusandae ex!</p>
-                            </div>
-                            <div class="comments-readmore justify-contents-center align-items-center">
-                                <a href=""><button class="text-capitalize text-white btn orange">Read</button></a>
-                                <div class="comments">
-                                    <span><i class="fas fa-comment-alt"></i></span>
-                                    <span class="comment-count">382</span>
-                                    <span class="text">comments</span>
-                                </div>
-                                <div class="readmore">
-                                    <div class="dot dot1"></div>
-                                    <div class="dot dot2"></div>
-                                    <div class="dot dot3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        {% endfor %}
                     </div>
                   </div>
               </section>
           </div>
       </section>
-      <!-- end ofrticles section -->
+      <!-- end of post list section -->
 
 {% endblock %}

@@ -42,7 +42,7 @@
 ## Deployment Timeline
 
 * [x] Deploy frontend to git pages
-* [ ] Deploy to Heroku as a test Platform
+* [x] Deploy to Heroku as a test Platform
 * [ ] Buy Custom Domain
 * [ ] Deploy to Google Cloud Platform under free tier (GCP)
 * [ ] 🚀Going Live!
