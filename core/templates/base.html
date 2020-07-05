@@ -66,7 +66,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="navbar-brand" href="blog-detail/"><strong>Portfolio</strong></a>
+                        <a class="navbar-brand" href="{% url 'blogdetail' %}"><strong>Portfolio</strong></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
                         aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -83,18 +83,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
                 <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
                     <li class="nav-item mx-2 my-4 ">
-                        <a class="nav-link waves-effect font-weight-bold" href="">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link waves-effect font-weight-bold" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item m-2 my-4">
-                        <a class="nav-link waves-effect font-weight-bold" href="blog/">blog</a>
+                        <a class="nav-link waves-effect font-weight-bold" href="{% url 'blog' %}">blog</a>
                     </li>
                     <!-- <li class="nav-item mx-2 my-4 ">
-                        <a class="nav-link waves-effect " href=""><strong>Login</strong><span class="sr-only">(current)</span></a>
+                        <a class="nav-link waves-effect font-weight-bold" href=""><strong>Login</strong><span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2 my-4 ">
-                        <a class="nav-link waves-effect " href=""><strong>Register</strong><span class="sr-only">(current)</span></a>
+                        <a class="nav-link waves-effect font-weight-bold" href=""><strong>Register</strong><span class="sr-only">(current)</span></a>
                     </li> -->
-                    
+
+                    <!-- <li class="nav-item mx-2 my-4 ">
+                        <a class="nav-link waves-effect font-weight-bold" href=""><strong>Write an Article</strong><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2 my-4 ">
+                        <a class="nav-link waves-effect font-weight-bold" href=""><strong>Profile</strong><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2 my-4 ">
+                        <a class="nav-link waves-effect font-weight-bold" href=""><strong>Logout</strong><span class="sr-only">(current)</span></a>
+                    </li> -->
+
                     <li class="nav-item m-2 my-3">
                         <div class="btn-submit">
                             <button type="submit" class="font-weight-bold waves-effect text-white float-right btn btn-md  btn-outline-white waves-effect">Contact me</button>

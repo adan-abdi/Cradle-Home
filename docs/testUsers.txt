@@ -1,0 +1,4 @@
+Admin Test Creddentials on Local
+db.sqlite3
+    username; adan
+    password; Cradle-Home
