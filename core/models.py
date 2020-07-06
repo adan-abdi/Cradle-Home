@@ -25,7 +25,7 @@ class Post(models.Model):
     # author defines a many-to-one relationship with posts. When deleted all related posts are deleted due to the SQL standard CASCADE. The name of the reverse relationship from user to post with related_name attr to allow access of related objects easily
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     # TODO: Post body, split to Intro, Body and Conclusion Later
-    # Add banner Image
+    # Add banner Image, offer placeholder dimensions if possible
     intro = models.TextField()
     body = models.TextField()
     conclusion = models.TextField()
@@ -56,3 +56,51 @@ class Post(models.Model):
                        args=[self.publish.year,
                              self.publish.month,
                              self.publish.day, self.slug])
+
+
+# Comment System
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ('created',)
+
+    def __str__(self):
+        return f'Comment by {self.name} on {self.post}'
+
+
+# Newsletter List
+class Newsletter(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='newsletter', null=True)
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    subscribed = models.BooleanField(default=True)
+    subscribedwhen = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('-subscribedwhen',)
+
+    def __str__(self):
+        return self.name
+
+
+class SharedPost(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='share', null=True)
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    recipientemail = models.EmailField()
+    message = models.TextField(null=True, blank=True)
+    shared = models.DateTimeField(auto_now_add=True)
+    sent  = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ('-shared',)
+
+    def __str__(self):
+        return self.name

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <section id="share" class="container p-5 align-items-center justify-content-center">
+        <div class="container align-items-center justify-content-center">
+            <div class="shareCard">
+                <div class="card mb-4 orange text-center wow fadeIn shareContent">
+                    {% if sent %}
+                        <div class="my-3 text-capitalize text-light font-weight-bold">
+                            E-mail successfully sent
+                            <br>
+                            {{ post.title }} was successfully sent to {{ form.cleaned_data.to }}.
+                        </div>
+                    {% else %}
+                        <div class="my-3 text-light font-weight-bold">
+                            <h5 class="my-3">Share "{{ post.title }}" by e-mail</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST">
+                                {% csrf_token %}
+                                <!-- form.as_p -->
+                                <!-- <div class="text-center my-3">
+                                    <button class="btn btn-outline-white font-weight-bold text-uppercaser" type="submit"><i class="fas fa-reply mr-1"></i> Share</button>
+                                </div> -->
+    
+                                <input type="text" id="defaultFormLoginEmailEx" placeholder="Enter your name" class="mb-2 text-center card form-control">
+                                <input type="email" id="defaultFormLoginEmailEx" placeholder="Enter your email" class="mb-2 text-center card form-control">
+                                <input type="email" id="defaultFormLoginEmailEx" placeholder="Enter recipient's email" class="mb-2 text-center card form-control">
+                                <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Optional Comments" class="mb-2 text-center card form-control"></textarea>
+                                <div class="text-center my-3">
+                                    <button class="btn btn-outline-white font-weight-bold text-uppercaser" type="submit"><i class="fas fa-reply mr-1"></i> Share</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

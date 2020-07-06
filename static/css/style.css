@@ -54,6 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
+
 }
 
 .header_area .main-menu .navbar .navbar-brand {
@@ -179,6 +180,7 @@ body {
   border-radius: 10px;
   border: none;
   outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
 }
 
 .site-main .brand-area .first-row .col-lg-4 > .single-brand > img {
@@ -186,7 +188,7 @@ body {
 }
 
 .site-main .brand-area .first-row .col-lg-4 > .single-brand:hover {
-  box-shadow: 0px 2px 5px rgba(57, 56, 61, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
   transform: scale(1.1);
 }
 
@@ -288,11 +290,12 @@ body {
 
 .heroku{
   background-color: purple;
-  /* color: white; */
+  color: white;
 }
 
 .postgres{
   background-color: #0036a3;
+  color: white;
 }
 
 .xd {
@@ -321,6 +324,7 @@ body {
 
 .git{
   background-color: #ea4e2e;
+  color: white;
 }
 
 .sci {
@@ -356,15 +360,19 @@ body {
 }
 
 .site-main > .services-area .services {
+  border-radius: 5px;
+  min-height: 350px;
+  max-height: 350px;
   background: #fff;
   padding: 1rem 1rem;
   width: 16rem;
   margin: 1rem 0.5rem;
   transition: box-shadow 0.7s ease;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
 }
 
 .site-main > .services-area .services:hover {
-  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
 }
 
 /* End Services Area */
@@ -403,7 +411,7 @@ body {
 }
 
 .site-main .about-area .client {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
   border-radius: 5px;
   background: #ffffff10;
   margin: 3rem 0rem;
@@ -513,6 +521,8 @@ footer.footer-area .social a:hover > i {
   left: 0;
   transform: translateY(-50%);
   z-index: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icons si {
@@ -561,7 +571,7 @@ footer.footer-area .social a:hover > i {
   text-align: center;
   transition: 0.3s;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
 }
 
 .social-menu ul li a:hover {
@@ -601,7 +611,7 @@ footer.footer-area .social a:hover > i {
   height: 70px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
   color: white;
   cursor: pointer;
   border: none;
@@ -617,7 +627,7 @@ footer.footer-area .social a:hover > i {
 
 #to-top:active {
   background: #f47f07;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
 }
 
 #to-top .fab:hover {
@@ -679,6 +689,8 @@ footer.footer-area .social a:hover > i {
   align-items: center;
   color: white;
   cursor: pointer;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
+  border-radius: 5px;
 }
 
 .con-card-icon {
@@ -910,12 +922,15 @@ footer.footer-area .social a:hover > i {
   height: 40px;
   width: 300px;
   border-radius: 40px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.95);
 }
 
 .btn-search {
   transform: translate(3%, -10%);
-  border: 2px solid white;
+  border: none;
+  outline: none;
   border-radius: 100%;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.95);
 }
 
 .btn-search i {
@@ -1110,3 +1125,21 @@ footer.footer-area .social a:hover > i {
   justify-content: center;
 }
 /* paginations */
+
+
+/* share page */
+
+.shareCard{
+  transform: translate(70%, 30%);
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+  height: 350px;
+  width: 40%;
+  margin-bottom: 20rem;
+}
+
+.shareContent{
+}
+
+/* end share */
