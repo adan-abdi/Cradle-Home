@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load blog_tags %}
+
 {% load static %}
 
 {% block title %} <title>Abdi Adan | Blog</title> {% endblock %}
@@ -21,7 +23,7 @@
                         
                         <!--Featured Image-->
                         <div class="card mb-4 wow fadeIn">
-                            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg" class="img-fluid card" alt="">
+                            <img src="{% static 'img/img1.jpg' %}" alt="portfolio-8" class="img-fluid">
                         </div>
                         <!--/.Featured Image-->
 
@@ -49,7 +51,7 @@
                                     <div class="media-body text-center text-md-left ml-md-3 ml-0">
                                         <h5 class="mt-0 font-weight-bold">Introduction
                                         </h5>
-                                        <p>{{ post.intro|linebreaks }}</p>
+                                        <p>{{ post.intro|markdown }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +62,7 @@
                         <div class="card mb-4 wow fadeIn">
                             <!--Card content-->
                             <div class="card-body">
-                                <p>{{ post.body|linebreaks }}</p>
+                                <p>{{ post.body|markdown }}</p>
                             </div>
                         </div>
                         <!-- End of Body-->
@@ -74,7 +76,7 @@
                                     <div class="media-body text-center text-md-left ml-md-3 ml-0">
                                         <h5 class="mt-0 font-weight-bold">Conclusion
                                         </h5>
-                                        <p>{{ post.conclusion|linebreaks }}</p>
+                                        <p>{{ post.conclusion|markdown }}</p>
                                     </div>
                                 </div>
                             </div>

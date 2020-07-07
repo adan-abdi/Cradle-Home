@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load blog_tags %}
+
 {% block title %} <title>Abdi Adan | Blog</title> {% endblock %}
 
 
@@ -30,11 +32,9 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Deserunt porro illum ratione tempore
                             consequuntur modi soluta obcaecati, temporibus
-                            quaerat laborum quis eum sapiente, architecto
-                            doloribus consectetur reprehenderit esse repellat
-                            aliquam maxime, nam ab iusto! Esse voluptates quas
-                            cum id deserunt?
+                            quaerat
                           </p>
+                          <p class="para text-light my-3">I've written {% total_posts %} posts so far.</p>
                         </div>
                       </div>
                     </div>
@@ -64,10 +64,10 @@
                       />
                       <div class="text-center mt-2">
                         <button
-                          class="btn btn-warning text-light btn-md font-weight-bold"
+                          class="btn btn-warning text-light font-weight-bold"
                           type="submit"
                         >
-                          Sign up
+                          Subscribe
                         </button>
                       </div>
                     </form>
@@ -97,6 +97,7 @@
                       {% endif %}
                     </div>
                     <div class="row">
+                    
                         {% for post in posts %}
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
                                 <div class="card card-body p-2 h-100 post">
@@ -119,7 +120,7 @@
                                             {% else %}
                                               <p class="tags">No tags added</p>
                                             {% endif %}
-                                            <p>{{ post.body|truncatewords:20|linebreaks }}</p>
+                                            <p>{{ post.body|markdown|truncatewords_html:30 }}</p>
                                         </div>
                                         <div class="comments-readmore justify-contents-center align-items-center">
                                             <a href="{{ post.get_absolute_url }}"><button class="text-capitalize text-white btn orange">Read</button></a>

@@ -1,0 +1,65 @@
+{% load blog_tags %}
+
+{% load static %}
+    
+    
+    
+    <!-- latest articles section -->
+    <section id="articles" class="viewport" style="margin-top: 150px;">
+        <div class="container ">
+            <section class="blogs">
+                <div class="project-title">
+                    <h1 class="text-uppercase h3 text-center mb-5">Latest Articles</h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        {% for post in latest_posts %}
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                                <div class="card card-body p-2 h-100 post">
+                                    <div class="our-project mx-1">
+                                        <div class="img img-wrapper">
+                                            <a class="">
+                                                <img src="{% static 'img/img1.jpg' %}" alt="portfolio-8" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <h3 class="title">{{ post.title }}</h3>
+                                            <p class="text-capitalize">Published {{ post.publish }} by {{ post.author }}</p>
+                                            {% if post.tags.all %}
+                                              <P>Tags:
+                                                {% for tag in post.tags.all %}
+                                                  {{ tag.name }}
+                                                  {% if not forloop.last %}, {% endif %}
+                                                {% endfor %}
+                                              </p>
+                                            {% else %}
+                                              <p class="tags">No tags added</p>
+                                            {% endif %}
+                                            <p>{{ post.intro|markdown|truncatewords_html:20 }}</p>
+                                        </div>
+                                        <div class="comments-readmore justify-contents-center align-items-center">
+                                            <a href="{{ post.get_absolute_url }}"><button class="text-capitalize text-white btn orange">Read</button></a>
+                                            <div class="comments justify-content-center align-items-center">
+                                              <span><i class="fas fa-comment-alt"></i></span>
+                                                {% with post.comments.count as total_comments %}
+                                                  <span class="comment-count">
+                                                    {{ total_comments }} comment{{ total_comments|pluralize }}
+                                                  </span>
+                                                {% endwith %}
+                                            </div>
+                                            <div class="readmore">
+                                                <div class="dot dot1"></div>
+                                                <div class="dot dot2"></div>
+                                                <div class="dot dot3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- end of latest articles section -->
