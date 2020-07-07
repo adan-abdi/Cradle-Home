@@ -1,13 +1,13 @@
 from django import forms
 
 
-from .models import Comment, Newsletter, SharedPost
+from .models import Comment
 
-# Model Form
-class SharedPostForm(forms.ModelForm):
-        class Meta:
-            model = SharedPost
-            fields = ('name', 'email', 'recipientemail', 'message')
+# # Model Form
+# class SharedPostForm(forms.ModelForm):
+#         class Meta:
+#             model = SharedPost
+#             fields = ('name', 'email', 'recipientemail', 'message')
 
 # name = forms.CharField(max_length=25)
 # email = forms.EmailField()
@@ -21,11 +21,11 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('name', 'email', 'body')
 
-# ModelForm
-class NewsletterList(forms.ModelForm):
-    class Meta:
-        model = Newsletter
-        fields = ('name', 'email')
+# # ModelForm
+# class NewsletterList(forms.ModelForm):
+#     class Meta:
+#         model = Newsletter
+#         fields = ('name', 'email')
 
 
 # # ModelForm

@@ -91,6 +91,11 @@
           <div class="container ">
               <section class="blogs">
                   <div class="container">
+                    <div class="mb-3">
+                      {% if tag %}
+                        <h4>Posts tagged with "{{ tag.name }}"</h4>
+                      {% endif %}
+                    </div>
                     <div class="row">
                         {% for post in posts %}
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
@@ -100,23 +105,31 @@
                                             <a class="">
                                                 <img src="{% static 'img/img1.jpg' %}" alt="portfolio-8" class="img-fluid">
                                             </a>
-                                            <div class="likes">
-                                                <span class="heart">
-                                                        <i class="fas fa-heart"></i> 382
-                                                </span>
-                                            </div>
                                         </div>
                                         <div class="content-wrapper">
                                             <h3 class="title">{{ post.title }}</h3>
-                                            <p>Published {{ post.publish }} by {{ post.author }}</p>
+                                            <p class="text-capitalize">Published {{ post.publish }} by {{ post.author }}</p>
+                                            {% if post.tags.all %}
+                                              <P>Tags:
+                                                {% for tag in post.tags.all %}
+                                                  {{ tag.name }}
+                                                  {% if not forloop.last %}, {% endif %}
+                                                {% endfor %}
+                                              </p>
+                                            {% else %}
+                                              <p class="tags">No tags added</p>
+                                            {% endif %}
                                             <p>{{ post.body|truncatewords:20|linebreaks }}</p>
                                         </div>
                                         <div class="comments-readmore justify-contents-center align-items-center">
                                             <a href="{{ post.get_absolute_url }}"><button class="text-capitalize text-white btn orange">Read</button></a>
-                                            <div class="comments">
-                                                <span><i class="fas fa-comment-alt"></i></span>
-                                                <span class="comment-count">382</span>
-                                                <span class="text">comments</span>
+                                            <div class="comments justify-content-center align-items-center">
+                                              <span><i class="fas fa-comment-alt"></i></span>
+                                                {% with post.comments.count as total_comments %}
+                                                  <span class="comment-count">
+                                                    {{ total_comments }} comment{{ total_comments|pluralize }}
+                                                  </span>
+                                                {% endwith %}
                                             </div>
                                             <div class="readmore">
                                                 <div class="dot dot1"></div>
@@ -129,22 +142,15 @@
                             </div>
                         {% endfor %}
                     </div>
+                    
+                  </div>
+                  <div class="mt-5">
+                    {% include "pagination.html" with page=posts %}
                   </div>
               </section>
           </div>
       </section>
       <!-- end of post list section -->
-
-
-      <!-- pagination -->
-
-      <div class="container">
-
-        {% include "pagination.html" with page=page_obj %}
-        
-      </div>
-
-      <!-- end of pagination -->
 
 
 {% endblock %}

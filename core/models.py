@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 from django.contrib.auth.models import User
+from taggit.managers import TaggableManager
 
 
 # If you delacre a custom model manager like the one below but you want to keep the objects as default, you have to add objects explicityly in the model
@@ -41,6 +42,7 @@ class Post(models.Model):
     objects = models.Manager() # The default manager of every model that retrieves all objects in the database
     # retreives using Post.published.all()
     published = PublishedManager() # Our custom manager to retreive all posts with published status
+    tags = TaggableManager() # taggable manager to add tags to this model
 
     class Meta:
         '''order by published date from latest'''
@@ -76,31 +78,31 @@ class Comment(models.Model):
 
 
 # Newsletter List
-class Newsletter(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='newsletter', null=True)
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    subscribed = models.BooleanField(default=True)
-    subscribedwhen = models.DateTimeField(auto_now_add=True)
+# class Newsletter(models.Model):
+#     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='newsletter', null=True)
+#     name = models.CharField(max_length=80)
+#     email = models.EmailField()
+#     subscribed = models.BooleanField(default=True)
+#     subscribedwhen = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
-        ordering = ('-subscribedwhen',)
+#     class Meta:
+#         ordering = ('-subscribedwhen',)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 
-class SharedPost(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='share', null=True)
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    recipientemail = models.EmailField()
-    message = models.TextField(null=True, blank=True)
-    shared = models.DateTimeField(auto_now_add=True)
-    sent  = models.BooleanField(default=True)
+# class SharedPost(models.Model):
+#     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='share', null=True)
+#     name = models.CharField(max_length=80)
+#     email = models.EmailField()
+#     recipientemail = models.EmailField()
+#     message = models.TextField(null=True, blank=True)
+#     shared = models.DateTimeField(auto_now_add=True)
+#     sent  = models.BooleanField(default=True)
 
-    class Meta:
-        ordering = ('-shared',)
+#     class Meta:
+#         ordering = ('-shared',)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name

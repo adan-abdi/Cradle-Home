@@ -41,9 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
-
     'core',
+    'taggit',
 ]
 
 # X_FRAME_OPTIONS='SAMEORIGIN'
@@ -136,3 +135,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 django_heroku.settings(locals())
+
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'your_account@gmail.com'
+# EMAIL_HOST_PASSWORD = 'your_password'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True

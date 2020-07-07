@@ -88,7 +88,6 @@
                                     {{ total_comments }} comment{{ total_comments|pluralize }}
                                 {% endwith %}
                             </div>
-
                             {% if comments %}
                                 {% for comment in comments %}
                                     <div class="media d-block d-md-flex my-3 card p-3">
@@ -117,8 +116,8 @@
                                     <div class="card p-3 mb-2 font-weight-bold orange text-light">Please leave a reply</div>
                                     <div class=" card card-body">
                                         <form method="POST">
-                                            <!-- {% csrf_token %}
-                                            {{ comment_form.as_p }} -->
+                                            {% csrf_token %}
+                                            {{ comment_form.as_p }}
                                             <p class="text-center mt-4">
                                                 <button class="btn btn-orange btn-lg text-light" type="submit">Post</button>
                                             </p>
@@ -158,119 +157,57 @@
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, nam.</p>
                             </div>
                         </div>
-
-
-                        <!--Card : Dynamic content wrapper-->
-                        <div class="card mb-4 orange text-center wow fadeIn">
-                            {% if user_subscribed %}
-                                <div class="my-3 text-light font-weight-bold">You have been successfuly subscribed</div>
-                            {% else %}
-                                <div class="my-3 text-light font-weight-bold">Do you want to get informed about new articles?</div>
-                                <!--Card content-->
-                                <div class="card-body">
-                                    <form method="POST">
-                                        {{ newsletter_form.as_p }}
-                                        {% csrf_token %}
-                                        <input type="email" id="defaultFormLoginEmailEx" placeholder="Enter email" class="text-center ard form-control">
-                                        <div class="text-center mt-2">
-                                            <button class="btn btn-outline-white font-weight-bold " type="submit">Subscribe</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            {% endif %}
-                        </div>
-                        <!--/.Card : Dynamic content wrapper-->
-
                         
+                        {% if post.tags.all %}
+                            <div class="card mb-3 mt-3 justify-content-center">
+                                    <p class="tags px-3 py-2">Tags: {{ post.tags.all|join:", " }}</p>
+                            </div>
+                        {% endif %}
+
                         <!--Card : Dynamic content wrapper-->
                         <div class="card mb-4 orange text-center wow fadeIn">
-                            <div class="card-body">
-                                <form method="POST">
-                                    <!-- csrf_token -->
-                                    <!-- form.as_p -->
-                                    <!-- <div class="text-center my-3">
-                                        <button class="btn btn-outline-white font-weight-bold text-uppercaser" type="submit"><i class="fas fa-reply mr-1"></i> Share</button>
-                                    </div> -->
-
-                                    <input type="text" id="defaultFormLoginEmailEx" placeholder="Enter your name" class="mb-2 text-center card form-control">
-                                    <input type="email" id="defaultFormLoginEmailEx" placeholder="Enter your email" class="mb-2 text-center card form-control">
-                                    <input type="email" id="defaultFormLoginEmailEx" placeholder="Enter recipient's email" class="mb-2 text-center card form-control">
-                                    <textarea name="comments" id="comments" cols="30" rows="3" placeholder="Optional Comments" class=" text-center card form-control"></textarea>
-                                </form>
-                            </div>
-                            <div class=" text-capitalize text-light font-weight-bold">
-                                <p>
-                                    <a href="{% url 'core:post_share' post.id %}">
-                                        <button class="btn btn-outline-white font-weight-bold text-capitalize" type="submit"><i class="fas fa-reply mr-1"></i> Share this post</button>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <!--/.Card : Dynamic content wrapper-->
-
-                        <!--Card-->
-                        <div class="card mb-4 wow fadeIn">
-
-                            <div class="card-header">Related articles</div>
-
-                            <!--Card content-->
-                            <div class="card-body">
-
-                                <ul class="list-unstyled">
-                                    <li class="media">
-                                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <a href="">
-                                                <h5 class="mt-0 mb-1 font-weight-bold text-dark">List-based media object</h5>
-                                            </a>
-                                            Cras sit amet nibh libero, in gravida nulla (...)
-                                        </div>
-                                    </li>
-                                    <li class="media my-4">
-                                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder6.jpg" alt="An image">
-                                        <div class="media-body">
-                                            <a href="">
-                                                <h5 class="mt-0 mb-1 font-weight-bold text-dark">List-based media object</h5>
-                                            </a>
-                                            Cras sit amet nibh libero, in gravida nulla (...)
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder5.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <a href="">
-                                                <h5 class="mt-0 mb-1 font-weight-bold text-dark">List-based media object</h5>
-                                            </a>
-                                            Cras sit amet nibh libero, in gravida nulla (...)
-                                        </div>
-                                    </li>
-                                </ul>
-
-                            </div>
-
-                        </div>
-                        <!--/.Card-->
-                        <!--Card : Dynamic content wrapper-->
-                        <div class="card mb-4 orange text-center wow fadeIn">
-
                             <div class="mt-3 text-light font-weight-bold">Suggest a topic for me to write about</div>
-
-                            <!--Card content-->
                             <div class="card-body">
-                                <!-- Default form login -->
                                 <form>
                                     <textarea name="comments" id="comments" cols="30" rows="3" class="mb-2 text-center card form-control"></textarea>
                                     <div class="text-center mt-3">
                                         <button class="btn btn-outline-white font-weight-bold text-uppercaser" type="submit">Submit</button>
                                     </div>
                                 </form>
-                                <!-- Default form login -->
-
                             </div>
-
                         </div>
                         <!--/.Card : Dynamic content wrapper-->
 
+                        <!--Card-->
+                        <div class="card mb-4 wow fadeIn">
+                            <div class="card-header">Related articles</div>
+                                {% for post in similar_posts %}
+                                    <div class="card-body">
+                                        <div class="list-unstyled">
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <a href="{{ post.get_absolute_url }}">
+                                                        <h5 class="mt-0 mb-1 font-weight-bold text-dark">{{ post.title }}</h5>
+                                                    </a>
+                                                    Cras sit amet nibh libero, in gravida nulla
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% empty %}
+                                    <div class="card-body">
+                                        <div class="list-unstyled">
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <p class="mt-0 mb-1 font-weight-bold text-dark">There are no similar posts as of yet<p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!--/.Card-->
                     </div>
                     <!--Grid column-->
 

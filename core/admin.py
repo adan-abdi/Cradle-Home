@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 
-from .models import Post, Comment, Newsletter, SharedPost
+from .models import Post, Comment
 
 admin.site.site_header = 'Portfolio administration'
 admin.site.unregister(Group)
@@ -26,16 +26,16 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'body')
 
 
-# Newsletter Model
-@admin.register(Newsletter)
-class NewsletterAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'post', 'subscribedwhen', 'subscribed')
-    list_filter = ('subscribed', 'subscribedwhen')
-    search_fields = ('name', 'email')
+# # Newsletter Model
+# @admin.register(Newsletter)
+# class NewsletterAdmin(admin.ModelAdmin):
+#     list_display = ('name', 'email', 'post', 'subscribedwhen', 'subscribed')
+#     list_filter = ('subscribed', 'subscribedwhen')
+#     search_fields = ('name', 'email')
 
 
-@admin.register(SharedPost)
-class SharedPostAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'post', 'shared', 'recipientemail')
-    list_filter = ('shared', 'post')
-    search_fields = ('name', 'email', 'post', 'recipientemail')
+# @admin.register(SharedPost)
+# class SharedPostAdmin(admin.ModelAdmin):
+#     list_display = ('name', 'email', 'post', 'shared', 'recipientemail')
+#     list_filter = ('shared', 'post')
+#     search_fields = ('name', 'email', 'post', 'recipientemail')
