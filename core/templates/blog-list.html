@@ -97,15 +97,26 @@
                       {% endif %}
                     </div>
                     <div class="row">
-                    
                         {% for post in posts %}
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
                                 <div class="card card-body p-2 h-100 post">
                                     <div class="our-project mx-1">
                                         <div class="img img-wrapper">
+                                            {% if post.banner %}
+                                      <!--Banner Image-->
+                                      <div class="img img-wrapper">
                                             <a class="">
-                                                <img src="{% static 'img/img1.jpg' %}" alt="portfolio-8" class="img-fluid">
+                                                <img src="{{ post.banner }}" alt="{{ post.banner }}" class="img-fluid">
                                             </a>
+                                      </div>
+                                      <!--/.Banner Image-->
+                                      {% else %}
+                                        <div class="img img-wrapper">
+                                            <a class="">
+                                                <img src="{% static 'img/img2.jpg' %}" alt="portfolio-8" class="img-fluid">
+                                            </a>
+                                        </div>
+                                      {% endif %}
                                         </div>
                                         <div class="content-wrapper">
                                             <h3 class="title">{{ post.title }}</h3>

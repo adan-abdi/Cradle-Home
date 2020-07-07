@@ -30,14 +30,16 @@
 * [x] Custom Admin Interface (Django)
 * [x] Customizing Admin Interface
 * [x] Blog Backends Standard
-* [ ] Blog Advanced Features - Comments, Email Shairing, Tags, Filter
-* [ ] Web Caching
-* [ ] SiteMap and SEO
+* [x] Blog Advanced Features - Comments, Email Shairing, Tags, Filter
+* [x] Blog Newsletter
+* [x] Latest Articles
+* [ ] Solve form input widgets on comments and newsletter
+* [ ] Profile Model and Images Issue
 * [ ] Blog Search
+* [ ] SiteMap and SEO
 * [ ] Contact Me
-* [ ] Blog Newsletter
-* [ ] Featured Projects backends
 * [ ] Testimonial backends
+* [ ] Web Caching
 
 
 ## Deployment Timeline
