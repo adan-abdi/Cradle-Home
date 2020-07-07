@@ -21,11 +21,14 @@
                     <!--Grid column-->
                     <div class="col-md-8 mb-4">
                         
-                        <!--Featured Image-->
+
+                        {% if post.banner %}
+                        <!--Banner Image-->
                         <div class="card mb-4 wow fadeIn">
-                            <img src="{% static 'img/img1.jpg' %}" alt="portfolio-8" class="img-fluid">
+                            <img src="{{ post.banner }}" alt="portfolio-8" class="img-fluid">
                         </div>
-                        <!--/.Featured Image-->
+                        <!--/.Banner Image-->
+                        {% endif %}
 
                         <!--Blog title and meta-->
                         <div class="card mb-4 wow fadeIn">

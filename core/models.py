@@ -20,6 +20,7 @@ class Post(models.Model):
         ('draft', 'Draft'),
         ('published', 'Published'),
     )
+    banner = models.ImageField(max_length=255, upload_to="banners", null=True, blank=True)
     title = models.CharField(max_length=250)
     # Used for dynamic urls in post-detail view, the slug has unique_for_date parameter to build urls slugs using the publish date and slug. Posts also have unique slugs
     slug = models.SlugField(max_length=250, unique_for_date='publish')
