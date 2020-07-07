@@ -5,6 +5,24 @@ from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 
 
+
+class Profile(models.Model):
+    avatar_pic = models.ImageField(max_length=255, upload_to="avatar")
+    profile_pic = models.ImageField(max_length=255, upload_to="profile")
+    name = models.CharField(max_length=25)
+    title = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=25)
+    caption = models.TextField(max_length=50)
+    description = models.TextField(max_length=250)
+    resume_pdf = models.FileField(upload_to='resume')
+    status = models.BooleanField(default=False)
+
+
+    def __str__(self):
+        return self.name
+
+
 # If you delacre a custom model manager like the one below but you want to keep the objects as default, you have to add objects explicityly in the model
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -77,33 +95,3 @@ class Comment(models.Model):
     def __str__(self):
         return f'Comment by {self.name} on {self.post}'
 
-
-# Newsletter List
-# class Newsletter(models.Model):
-#     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='newsletter', null=True)
-#     name = models.CharField(max_length=80)
-#     email = models.EmailField()
-#     subscribed = models.BooleanField(default=True)
-#     subscribedwhen = models.DateTimeField(auto_now_add=True)
-
-#     class Meta:
-#         ordering = ('-subscribedwhen',)
-
-#     def __str__(self):
-#         return self.name
-
-
-# class SharedPost(models.Model):
-#     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='share', null=True)
-#     name = models.CharField(max_length=80)
-#     email = models.EmailField()
-#     recipientemail = models.EmailField()
-#     message = models.TextField(null=True, blank=True)
-#     shared = models.DateTimeField(auto_now_add=True)
-#     sent  = models.BooleanField(default=True)
-
-#     class Meta:
-#         ordering = ('-shared',)
-
-#     def __str__(self):
-#         return self.name

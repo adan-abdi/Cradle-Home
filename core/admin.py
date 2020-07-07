@@ -1,10 +1,12 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 
-from .models import Post, Comment
+from .models import Post, Comment, Profile
 
 admin.site.site_header = 'Portfolio administration'
 admin.site.unregister(Group)
+
+admin.site.register(Profile)
 
 # Post Model
 @admin.register(Post)

@@ -16,27 +16,28 @@
                         <div class="row pt-5">
                             <div class="col-lg-4 col-md-4 pt-5">
                                 <div id="profile-wrapper" class="card card-body h-100">
-                                    <img id="profile-pic" src="{% static 'img/banner/banner-image.png' %}" alt="">
+                                    <img id="profile-pic" class="av" src="{% static 'img/pic.jpg' %}" alt="">
                                     <hr>
-                                    <h4>Hi, I'm Abdi Adan</h4>
+                                    <h4>Hi, I'm {{ active_profile.name }}</h4>
                                     <p class="font-weight-bold">
                                         <a class="text-black mr-1"><i class="fas fa-envelope-open-text"></i></a>
-                                        adanabdi036@gmail.com
+                                        {{ active_profile.email }}
                                     </p>
-                                    <p>An experienced Software Developer</p>
+                                    <p>{{ active_profile.caption }}</p>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-12 pt-5">
                                 <div class="card card-body h-100">
-                                    <h4 class="text-center">Software Developer & Junior Data Scientist</h4>
+                                    <h4 class="text-center">{{ active_profile.title }}</h4>
                                     <hr>
-                                    <p>I am Software Engineer experience in Developing Apps for The Web and Mobile together with a passion for developing data centered Products. </p>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum asperiores at temporibus ab deleniti officiis recusandae provident id delectus amet!</p>
-                                    <div class="site-buttons">
+                                    <p>{{ active_profile.description }}</p>
+                                    <p>{{ active_profile.description }}</p>
+                                    <br>
+                                    <div class="site-buttons mb-0">
                                         <div class="d-flex flex-row flex-wrap">
-                                                <button class="text-uppercase text-white btn btn-warning "><i class="fas fa-user-shield mr-1"></i> <strong>Hire Me</strong></button>
-                                                <button class="text-uppercase  btn btn-outline-warning "><i class="fas fa-phone-alt mr-1"></i> <strong>+254-723-073552</strong></button>
-                                                <button class="text-uppercase text-white btn btn-warning "><i class="far fa-file-pdf mr-2"></i> <strong>Download Resume</strong></button>
+                                                <button class="text-uppercase text-white btn btn-warning "><a class="text-light font-weight-bold" href=""><i class="fas fa-user-shield mr-1"></i> View My Projects</a></button>
+                                                <button class="text-uppercase  btn btn-outline-warning font-weight-bold"><i class="fas fa-phone-alt mr-1"></i> {{ active_profile.phone_number }}</button>
+                                                <button class="text-uppercase text-white btn btn-warning "><a class="text-light font-weight-bold" href="{% static 'resume.pdf' %}" target="_blank"><i class="far fa-file-pdf mr-1 "></i> Download Resume</a></button>
                                         </div>
                                     </div>
                                 </div>

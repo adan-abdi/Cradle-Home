@@ -7,15 +7,17 @@ from django.db.models import Count
 
 
 from .forms import CommentForm
-from .models import Post, Comment
+from .models import Post, Comment, Profile
 
 # Create your views here.
 
 # display homepage
 def home(request):
-    context = {}
+    active_profile = Profile.objects.filter(status=True).first()
+    context = {
+                'active_profile': active_profile,
+    }
     return render(request, 'index.html', context)
-
 
 
 # display all posts

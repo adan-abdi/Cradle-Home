@@ -48,6 +48,10 @@ body {
 
 /* start navigation */
 
+.av{
+  border-radius: 50% !important;
+}
+
 .nav-start {
   flex-direction: row;
   list-style: none;
@@ -1125,21 +1129,3 @@ footer.footer-area .social a:hover > i {
   justify-content: center;
 }
 /* paginations */
-
-
-/* share page */
-
-.shareCard{
-  transform: translate(70%, 30%);
-  align-items: center;
-  justify-content: center;
-  min-height: 350px;
-  height: 350px;
-  width: 40%;
-  margin-bottom: 20rem;
-}
-
-.shareContent{
-}
-
-/* end share */
