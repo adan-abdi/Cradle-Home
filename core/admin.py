@@ -1,12 +1,13 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 
-from .models import Post, Comment, Profile, Suggest, Contactme
+from .models import Post, Comment, Profile, Suggest, Contactme, Category
 
 admin.site.site_header = 'Portfolio administration'
 admin.site.unregister(Group)
 
 admin.site.register(Profile)
+admin.site.register(Category)
 
 # Post Model
 @admin.register(Post)
@@ -17,7 +18,7 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = ('author',)
     date_hierarchy = 'publish'
-    ordering = ('status', 'publish')
+    ordering = ('status', '-publish')
 
 
 # Comment Model

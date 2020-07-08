@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 
+from ckeditor.fields import RichTextField
 
 
 class Profile(models.Model):
@@ -22,6 +23,12 @@ class Profile(models.Model):
         return self.name
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
 # If you delacre a custom model manager like the one below but you want to keep the objects as default, you have to add objects explicityly in the model
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -38,6 +45,7 @@ class Post(models.Model):
         ('published', 'Published'),
     )
     banner = models.ImageField(max_length=255, upload_to="banners", null=True, blank=True)
+    categories = models.ManyToManyField('Category', related_name='posts', blank=True)
     title = models.CharField(max_length=250)
     # Used for dynamic urls in post-detail view, the slug has unique_for_date parameter to build urls slugs using the publish date and slug. Posts also have unique slugs
     slug = models.SlugField(max_length=250, unique_for_date='publish')
@@ -45,9 +53,9 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     # TODO: Post body, split to Intro, Body and Conclusion Later
     # Add banner Image, offer placeholder dimensions if possible
-    intro = models.TextField()
-    body = models.TextField()
-    conclusion = models.TextField()
+    intro = RichTextField()
+    body = RichTextField()
+    conclusion = RichTextField()
     # timezone.now is like a timezone aware version of datetime.now method.
     publish = models.DateTimeField(default=timezone.now)
     # by default, posts create date are started form the moment an instance of post is created

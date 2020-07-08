@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     'core',
     'taggit',
+    'ckeditor'
 ]
 
 # X_FRAME_OPTIONS='SAMEORIGIN'
