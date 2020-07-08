@@ -8,7 +8,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {% block title %} <title>Abdi Adan</title> {% endblock %}
+        <title>{% block title %} {{ title }} {% endblock %}</title>
     
         <!-- favicon -->
         <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" sizes="64x64">
@@ -62,7 +62,7 @@
                 <ul class="nav-start navbar-nav ml-auto nav-flex-icons p-1">
                     <li class="nav-item">
                         <a class="nav-link p-0 nav-item avatar px-2" href="#">
-                            <img src="{% static 'img/pro.jpg' %}" class="av z-depth-0"
+                            <img src="{% static 'img/pic.jpg' %}" class="av z-depth-0"
                             alt="avatar image" height="35">
                         </a>
                     </li>
@@ -87,16 +87,17 @@
                     <li class="nav-item mx-2 my-4 ">
                         <a class="nav-link waves-effect font-weight-bold" href="">Home<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item m-2 my-4">
+                    <li class="nav-item m-2 my-4 mr-5">
                         <a class="nav-link waves-effect font-weight-bold" href="post/">Blog</a>
                     </li>
                     
-
+                    {% if title == 'Abdi Adan' %}
                     <li class="nav-item m-2 my-3">
                         <div class="btn-submit">
-                            <button type="submit" class="font-weight-bold waves-effect text-white float-right btn btn-md  btn-outline-white waves-effect">Contact me</button>
+                            <button class="text-uppercase text-white btn btn-md btn-outline-white float-right"><a class="waves-effect text-light font-weight-bold" href="#contact">Contact me</a></button>
                         </div>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

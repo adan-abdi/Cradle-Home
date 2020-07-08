@@ -4,7 +4,7 @@
 
 {% load static %}
 
-{% block title %} <title>Abdi Adan | Blog</title> {% endblock %}
+<title>{% block title %} {{ title }} {% endblock %}</title>
 
 {% block content %}
 
@@ -23,11 +23,17 @@
                         
 
                         {% if post.banner %}
-                        <!--Banner Image-->
-                        <div class="card mb-4 wow fadeIn">
-                            <img src="{{ post.banner }}" alt="portfolio-8" class="img-fluid">
-                        </div>
-                        <!--/.Banner Image-->
+                            <!--Banner Image-->
+                            <div class="card mb-4 wow fadeIn">
+                                <img src="{{ post.banner }}" alt="{{post.title}}" class="img-fluid">
+                            </div>
+                            <!--/.Banner Image-->
+                        {% else %}
+                            <!--Banner Image-->
+                            <div class="card mb-4 wow fadeIn">
+                                <img src="{% static 'img/img1.jpg' %}" alt="{{post.title}}" class="img-fluid">
+                            </div>
+                            <!--/.Banner Image-->
                         {% endif %}
 
                         <!--Blog title and meta-->
@@ -117,8 +123,7 @@
                             <div class="mb-3 wow fadeIn">
                                 {% if new_comment %}
                                     <div class="card p-3 mb-2 font-weight-bold orange text-light">Your comment has been added.</div>
-                                {% else %}
-                                    <div class="card p-3 mb-2 font-weight-bold orange text-light">Please leave a reply</div>
+                                    <div class="card p-3 mb-2 font-weight-bold orange text-light">Leave another comment?</div>
                                     <div class=" card card-body">
                                         <form method="POST">
                                             {% csrf_token %}
@@ -126,20 +131,21 @@
                                             <p class="text-center mt-4">
                                                 <button class="btn btn-orange btn-lg text-light" type="submit">Post</button>
                                             </p>
-                                            
-                                            <!-- Comment -->
-                                            <div class="form-group">
-                                                <label for="replyFormComment">Your comment</label>
-                                                <textarea class="form-control" id="replyFormComment" rows="5"></textarea>
-                                            </div>
-                                            <!-- Name -->
-                                            <label for="replyFormName">Your name</label>
-                                            <input type="email" id="replyFormName" class="form-control">
-                                            <br>
-                                            <!-- Email -->
-                                            <label for="replyFormEmail">Your e-mail</label>
-                                            <input type="email" id="replyFormEmail" class="form-control">
                                         </form>
+                                    </div>
+                                {% else %}
+                                    <div class="card p-3 mb-2 font-weight-bold orange text-light">Please leave a reply</div>
+                                    <div class=" card card-body">
+                                        <form method="POST">
+                                            <div class="form-group">
+                                                {% csrf_token %}
+                                                {{ comment_form.as_p }}
+                                            </div>
+                                            
+                                            <p class="text-center mt-4">
+                                                <button class="btn btn-orange btn-lg text-light" type="submit">Post</button>
+                                            </p>
+
                                     </div>
                                 {% endif %}
                             </div>
@@ -169,19 +175,21 @@
                             </div>
                         {% endif %}
 
-                        <!--Card : Dynamic content wrapper-->
+
+                        <!-- {% if new_suggestion == None %}
                         <div class="card mb-4 orange text-center wow fadeIn">
                             <div class="mt-3 text-light font-weight-bold">Suggest a topic for me to write about</div>
                             <div class="card-body">
-                                <form>
-                                    <textarea name="comments" id="comments" cols="30" rows="3" class="mb-2 text-center card form-control"></textarea>
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    {{ suggestion_form.as_p }}
                                     <div class="text-center mt-3">
                                         <button class="btn btn-outline-white font-weight-bold text-uppercaser" type="submit">Submit</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <!--/.Card : Dynamic content wrapper-->
+                        {% endif %} -->
 
                         <!--Card-->
                         <div class="card mb-4 wow fadeIn">

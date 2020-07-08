@@ -1,19 +1,7 @@
 from django import forms
 
 
-from .models import Comment
-
-# # Model Form
-# class SharedPostForm(forms.ModelForm):
-#         class Meta:
-#             model = SharedPost
-#             fields = ('name', 'email', 'recipientemail', 'message')
-
-# name = forms.CharField(max_length=25)
-# email = forms.EmailField()
-# to = forms.EmailField()
-# comments = forms.CharField(required=False, widget=forms.Textarea)
-
+from .models import Comment, Suggest
 
 # ModelForm
 class CommentForm(forms.ModelForm):
@@ -21,16 +9,24 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('name', 'email', 'body')
 
-# # ModelForm
-# class NewsletterList(forms.ModelForm):
-#     class Meta:
-#         model = Newsletter
-#         fields = ('name', 'email')
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
 
 
-# # ModelForm
-# class SuggestTopic(forms.Form):
-#     comment = forms.CharField()
 
+
+
+# ModelForm
+class SuggestForm(forms.ModelForm):
+    class Meta:
+        model = Suggest
+        exclude = ('created', 'post')
+
+        widgets = {
+            'suggestion': forms.Textarea(attrs={'class': 'form-control'}),
+        }
 
 

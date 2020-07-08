@@ -11,6 +11,10 @@
   zoom: 1.1;
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -49,9 +53,25 @@ body {
 /* start navigation */
 
 .av{
-  border-radius: 50% !important;
+  border-radius: 100% !important;
+  height: 40px !important;
+  width: 40px !important;
 }
 
+.av-main{
+  border-radius: 100% !important;
+  height: 90px !important;
+  width: 90px !important;
+}
+
+.av-pri{
+  border-radius: 100% !important;
+}
+
+.form-control:focus {
+  border-color: orange;
+  box-shadow: 0 0 0 0.2rem orange;
+}
 .nav-start {
   flex-direction: row;
   list-style: none;
@@ -184,7 +204,7 @@ body {
   border-radius: 10px;
   border: none;
   outline: none;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.95);
 }
 
 .site-main .brand-area .first-row .col-lg-4 > .single-brand > img {

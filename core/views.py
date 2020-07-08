@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import ListView
 from django.core.mail import send_mail
@@ -6,22 +8,26 @@ from taggit.models import Tag
 from django.db.models import Count
 
 
-from .forms import CommentForm
-from .models import Post, Comment, Profile
+from .forms import CommentForm, SuggestForm
+from .models import Post, Comment, Profile, Suggest
 
 # Create your views here.
 
 # display homepage
 def home(request):
+    title = 'Abdi Adan'
     active_profile = Profile.objects.filter(status=True).first()
     context = {
                 'active_profile': active_profile,
+                'title': title,
     }
     return render(request, 'index.html', context)
 
 
 # display all posts
 def post_list(request,  tag_slug=None):
+    active_profile = Profile.objects.filter(status=True).first()
+    title = 'Abdi Adan | Blog'
     object_list = Post.published.all()
     tag = None
     if tag_slug:
@@ -43,13 +49,17 @@ def post_list(request,  tag_slug=None):
     context = {
                 'page': page, 
                 'posts': posts,
-                'tag': tag
+                'tag': tag,
+                'title': title,
+                'active_profile': active_profile,
             }
     return render(request, 'blog-list.html', context)
 
 
 
 def post_detail(request, year, month, day, post):
+    active_profile = Profile.objects.filter(status=True).first()
+    title = 'Abdi Adan | Blog'
     post = get_object_or_404(Post, slug=post,
                                    status='published',
                                    publish__year=year,
@@ -72,8 +82,29 @@ def post_detail(request, year, month, day, post):
             new_comment.post = post
             # Save the comment to the database
             new_comment.save()
+            #return HttpResponseRedirect(reverse("post_detail", kwargs={'year':'year', 'month':'month', 'day':'day', 'post':'post'}))
     else:
         comment_form = CommentForm()
+
+
+    suggestions = Suggest.objects.all()
+    new_suggestion = None
+
+    # Suggestion Form on blog-detail
+    if request.method == 'POST':
+        # Suggestion form
+        suggestion_form = SuggestForm(data=request.POST)
+        if suggestion_form.is_valid():
+            # Create Comment object but don't save to database yet
+            new_suggestion = suggestion_form.save(commit=False)
+            # Assign the current post to the comment
+            new_suggestion.post = post
+            # Save the comment to the database
+            new_suggestion.save()
+            #return HttpResponseRedirect(reverse("post_detail", kwargs={'year':'year', 'month':'month', 'day':'day', 'post':'post'}))
+    else:
+        suggestion_form = SuggestForm()
+
 
     # List of similar posts
     post_tags_ids = post.tags.values_list('id', flat=True)
@@ -82,11 +113,16 @@ def post_detail(request, year, month, day, post):
 
 
     context = {
+                'suggestion_form': suggestion_form,
+                'new_suggestion': new_suggestion,
+                'suggestions': suggestions,
                 'post': post, 
                 'comments': comments, 
                 'new_comment': new_comment, 
                 'comment_form': comment_form,
-                'similar_posts': similar_posts
+                'similar_posts': similar_posts,
+                'title': title,
+                'active_profile': active_profile,
             }
     return render(request, 'blog-detail.html', context)
 

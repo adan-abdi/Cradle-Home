@@ -4,7 +4,7 @@
 
 {% load static %}
 
-{% block title %} <title>Abdi Adan </title> {% endblock %}
+<title>{% block title %} {{ title }} {% endblock %}</title>
 
 {% block content %}
     <!--  ======================= Start Banner Area =======================  -->
@@ -16,7 +16,7 @@
                         <div class="row pt-5">
                             <div class="col-lg-4 col-md-4 pt-5">
                                 <div id="profile-wrapper" class="card card-body h-100">
-                                    <img id="profile-pic" class="av" src="{% static 'img/pic.jpg' %}" alt="">
+                                    <img id="profile-pic" class="av-pri" src="{% static 'img/pic.jpg' %}" alt="">
                                     <hr>
                                     <h4>Hi, I'm {{ active_profile.name }}</h4>
                                     <p class="font-weight-bold">
@@ -35,7 +35,7 @@
                                     <br>
                                     <div class="site-buttons mb-0">
                                         <div class="d-flex flex-row flex-wrap">
-                                                <button class="text-uppercase text-white btn btn-warning "><a class="text-light font-weight-bold" href=""><i class="fas fa-user-shield mr-1"></i> View My Projects</a></button>
+                                                <button class="text-uppercase text-white btn btn-warning "><a class="text-light font-weight-bold" href="#projects"><i class="fas fa-user-shield mr-1"></i> View My Projects</a></button>
                                                 <button class="text-uppercase  btn btn-outline-warning font-weight-bold"><i class="fas fa-phone-alt mr-1"></i> {{ active_profile.phone_number }}</button>
                                                 <button class="text-uppercase text-white btn btn-warning "><a class="text-light font-weight-bold" href="{% static 'resume.pdf' %}" target="_blank"><i class="far fa-file-pdf mr-1 "></i> Download Resume</a></button>
                                         </div>
@@ -305,7 +305,7 @@
 
 
     <!--  ======================= Project Area =============================  -->
-    <main class="site-main mt-5">
+    <main id="projects" class="site-main mt-5">
         <section class="project-area container">
             <div class="container ">
                 <div class="project-title pb-5">
@@ -325,19 +325,19 @@
                             <div class="button-group pb-2" id="navbarSupportedContent-555">
                                 <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
                                     <li class="nav-item mx-2 my-4 ">
-                                        <a class="nav-link waves-effect active" href=""><button type="button" class="text-capitalize font-weight-bold text-light" data-filter=".web">Web</button><span class="sr-only">(current)</span></a>
+                                        <a class="nav-link waves-effect active" ><button type="button" class="text-capitalize font-weight-bold text-light" data-filter=".web">Web</button><span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item m-2 my-4">
-                                        <a class="nav-link waves-effect" href=""><button type="button" class="text-light font-weight-bold text-capitalize" data-filter=".mobile">Mobile</button></a>
+                                        <a class="nav-link waves-effect" ><button type="button" class="text-light font-weight-bold text-capitalize" data-filter=".mobile">Mobile</button></a>
                                     </li>
                                     <li class="nav-item m-2 my-4">
-                                        <a class="nav-link waves-effect" href=""><button type="button" class="text-light font-weight-bold text-capitalize" data-filter=".ui">UX/UI</button></a>
+                                        <a class="nav-link waves-effect" ><button type="button" class="text-light font-weight-bold text-capitalize" data-filter=".ui">UX/UI</button></a>
                                     </li>
                                     <li class="nav-item m-2 my-4">
-                                        <a class="nav-link waves-effect" href=""><button type="button" class="text-light font-weight-bold text-capitalize" data-filter=".data">Data Projects</button></a>
+                                        <a class="nav-link waves-effect" ><button type="button" class="text-light font-weight-bold text-capitalize" data-filter=".data">Data Projects</button></a>
                                     </li>
                                     <li class="nav-item mx-2 my-4 ">
-                                        <a class="nav-link waves-effect active" href=""><button type="button" class="text-light font-weight-bold text-capitalize active" id="btn1" data-filter="*">All</button></a>
+                                        <a class="nav-link waves-effect active" ><button type="button" class="text-light font-weight-bold text-capitalize active" id="btn1" data-filter="*">All</button></a>
                                     </li>
                                 </ul>
                             </div>
@@ -551,7 +551,7 @@
 
 
     <!-- contact me section-->
-    <section class="orange section-contact-info mt-3 text-dark">
+    <section id="contact" class="orange section-contact-info mt-3 text-dark">
         <div class="container text-dark">
             <div class="row text-dark">
                 <div class="col-lg-9 col-md-12 text-dark">
@@ -705,9 +705,8 @@
                 <div class="card card-body orange container subscribe">
                     <div class="row">
                         <div class="col-lg-12 text-center subscribe-title">
-                            <h4 class="text-uppercase">Get Updates from My Blog</h4>
-                            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                                consequuntur.</p>
+                            <h4 class="">Start a Project</h4>
+                            <p class="para">Interested in working together? We should queue up a chat. I’ll buy the coffee.</p>
                         </div>
                     </div>
                     <div class="d-sm-flex justify-content-center">
@@ -718,7 +717,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="btn-submit">
-                                        <button type="submit" class="text-white float-right btn btn-outline-white waves-effect">Subscribe</button>
+                                        <button type="submit" class="text-white float-right btn btn-outline-white waves-effect text-capitalize">Lets do this</button>
                                     </div>
                                 </div>
                             </div>

@@ -4,7 +4,7 @@
 
 * [x] Portfolio Homepage
 * [x] Standard Blog
-* [ ] Advanced Blog
+* [x] Advanced Blog
 
 ## FrontEnd-Features
 
@@ -14,10 +14,10 @@
 * [x] Personal Blog Detail Page
 * [x] Add Favicon
 * [x] Stack Section
-* [ ] Customize Images
 * [x] Why Choose Us Section
 * [ ] Responsive Design
 * [ ] Refactor
+* [ ] Customize Images
 
 * Accessibility Features
 * [x] Scroll To Top Button
@@ -33,14 +33,13 @@
 * [x] Blog Advanced Features - Comments, Email Shairing, Tags, Filter
 * [x] Blog Newsletter
 * [x] Latest Articles
-* [ ] Solve form input widgets on comments and newsletter
-* [ ] Profile Model and Images Issue
+* [x] Solve form input widgets on comments and newsletter
+* [ ] Profile Model and Images Issue try amazon s3 (static files)
 * [ ] Blog Search
 * [ ] SiteMap and SEO
 * [ ] Contact Me
 * [ ] Testimonial backends
 * [ ] Web Caching
-
 
 ## Deployment Timeline
 

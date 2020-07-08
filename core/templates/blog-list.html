@@ -4,7 +4,7 @@
 
 {% load blog_tags %}
 
-{% block title %} <title>Abdi Adan | Blog</title> {% endblock %}
+<title>{% block title %} {{ title }} {% endblock %}</title>
 
 
 {% block content %}
@@ -20,19 +20,16 @@
               <!--Grid column-->
               <div class="col-md-8">
                 <!--Blog list heading-->
-                <div class="card wow fadeIn">
+                <div class="card wow fadeIn h-100 orange">
                   <div class="">
-                    <div class="card card-body orange subscribe h-100">
+                    <div class="subscribe">
                       <div class="row">
                         <div class="col-lg-12 text-center subscribe-title">
-                          <h4 class="text-uppercase text-light">
+                          <h4 class="text-uppercase text-light mt-5">
                             My Blog Posts
                           </h4>
-                          <p class="para text-light my-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Deserunt porro illum ratione tempore
-                            consequuntur modi soluta obcaecati, temporibus
-                            quaerat
+                          <p class="para text-light my-3 mx-3">
+                            In my blog posts listed below, I mostly write about tech, with love and to enlighten certain aspects of my career  
                           </p>
                           <p class="para text-light my-3">I've written {% total_posts %} posts so far.</p>
                         </div>
@@ -44,34 +41,19 @@
               </div>
               <!--Grid column-->
 
+              
               <!--Grid column-->
               <div class="col-md-4">
                 <!--Card : Dynamic content wrapper-->
-                <div class="card mb-4 text-center wow fadeIn">
+                <div class="card mb-4 text-center h-100 wow fadeIn">
                   <!--Card content-->
-                  <div class="card-body h-100">
-                    <div class="text-dark font-weight-bold">
-                      Do you want to get informed about new articles?
-                    </div>
-                    <!-- Default form login -->
-                    <form>
-                      <br>
-                      <input
-                        type="email"
-                        id="defaultFormLoginEmailEx"
-                        class=" btn-outline-warning orange text-center form-control"
-                        placeholder="Your email"
-                      />
-                      <div class="text-center mt-2">
-                        <button
-                          class="btn btn-warning text-light font-weight-bold"
-                          type="submit"
-                        >
-                          Subscribe
-                        </button>
-                      </div>
-                    </form>
-                    <!-- Default form login -->
+                  <div class="card-body">
+                    <img id="profile-pic" class="av-main" src="{% static 'img/pic.jpg' %}" alt="">
+                    <p class="font-weight-bold mt-1">Hi, I'm {{ active_profile.name }}</p>
+                    <p class="font-weight-bold">
+                      <a class="text-black mr-1"><i class="fas fa-envelope-open-text"></i></a>
+                      {{ active_profile.email }}
+                    </p>
                   </div>
                 </div>
                 <!--/.Card : Dynamic content wrapper-->
@@ -102,7 +84,7 @@
                                 <div class="card card-body p-2 h-100 post">
                                     <div class="our-project mx-1">
                                         <div class="img img-wrapper">
-                                            {% if post.banner %}
+                                      {% if post.banner %}
                                       <!--Banner Image-->
                                       <div class="img img-wrapper">
                                             <a class="">
