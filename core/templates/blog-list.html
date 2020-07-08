@@ -32,6 +32,9 @@
                             In my blog posts listed below, I mostly write about tech, with love and to enlighten certain aspects of my career  
                           </p>
                           <p class="para text-light my-3">I've written {% total_posts %} posts so far.</p>
+                          <p class="text-light font-weight-bold">
+                            <a class="text-light" href="{% url "core:post_feed" %}">Subscribe to my RSS feed</a>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -78,6 +81,7 @@
                         <h4>Posts tagged with "{{ tag.name }}"</h4>
                       {% endif %}
                     </div>
+                    
                     <div class="row">
                         {% for post in posts %}
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
@@ -113,7 +117,7 @@
                                             {% else %}
                                               <p class="tags">No tags added</p>
                                             {% endif %}
-                                            <p>{{ post.body|markdown|truncatewords_html:30 }}</p>
+                                            <p>{{ post.intro|markdown|truncatewords_html:20 }}</p>
                                         </div>
                                         <div class="comments-readmore justify-contents-center align-items-center">
                                             <a href="{{ post.get_absolute_url }}"><button class="text-capitalize text-white btn orange">Read</button></a>

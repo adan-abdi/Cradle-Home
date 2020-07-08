@@ -1,6 +1,8 @@
 from django.urls import path
-from . import views
 
+
+from . import views
+from .feeds import LatestPostsFeed
 
 # application namespace, allows urls to be organized by apps
 app_name = 'core'
@@ -14,4 +16,6 @@ urlpatterns = [
     # path('post/', views.PostListView.as_view(), name='post_list'),
     path('<int:year>/<int:month>/<int:day>/<slug:post>/', views.post_detail, name='post_detail'),
     path('post/tag/<slug:tag_slug>/', views.post_list, name='post_list_by_tag'),
+    # Feed
+    path('feed/', LatestPostsFeed(), name='post_feed'),
 ]

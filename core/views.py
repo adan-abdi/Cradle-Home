@@ -8,18 +8,38 @@ from taggit.models import Tag
 from django.db.models import Count
 
 
-from .forms import CommentForm, SuggestForm
-from .models import Post, Comment, Profile, Suggest
+from .forms import CommentForm, SuggestForm, ContactmeForm
+from .models import Post, Comment, Profile, Suggest, Contactme
 
 # Create your views here.
 
 # display homepage
 def home(request):
+    late_posts = Post.published.annotate(total_comments=Count('comments')).order_by('-total_comments')[:3]
     title = 'Abdi Adan'
     active_profile = Profile.objects.filter(status=True).first()
+
+
+    contact_details = None
+    contact = Contactme.objects.all()
+
+    if request.method == 'POST':
+        # Contact Me form
+        contact_me_form = ContactmeForm(data=request.POST)
+        if contact_me_form.is_valid():
+            contact_details = contact_me_form.save()
+            
+    else:
+        contact_me_form = CommentForm()
+
+
     context = {
                 'active_profile': active_profile,
                 'title': title,
+                'late_posts': late_posts,
+                'contact_details': contact_details,
+                'contact_me_form': contact_me_form,
+                'contact': contact
     }
     return render(request, 'index.html', context)
 
@@ -111,6 +131,8 @@ def post_detail(request, year, month, day, post):
     similar_posts = Post.published.filter(tags__in=post_tags_ids).exclude(id=post.id)
     similar_posts = similar_posts.annotate(same_tags=Count('tags')).order_by('-same_tags','-publish')[:4]
 
+    
+
 
     context = {
                 'suggestion_form': suggestion_form,
@@ -123,6 +145,7 @@ def post_detail(request, year, month, day, post):
                 'similar_posts': similar_posts,
                 'title': title,
                 'active_profile': active_profile,
+                
             }
     return render(request, 'blog-detail.html', context)
 

@@ -1,7 +1,7 @@
 from django import forms
 
 
-from .models import Comment, Suggest
+from .models import Comment, Suggest, Contactme
 
 # ModelForm
 class CommentForm(forms.ModelForm):
@@ -16,9 +16,6 @@ class CommentForm(forms.ModelForm):
         }
 
 
-
-
-
 # ModelForm
 class SuggestForm(forms.ModelForm):
     class Meta:
@@ -29,4 +26,13 @@ class SuggestForm(forms.ModelForm):
             'suggestion': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
+class ContactmeForm(forms.ModelForm):
+    class Meta:
+        model = Contactme
+        fields = ('name', 'email','message')
 
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'message': forms.Textarea(attrs={'class': 'form-control'}),
+        }

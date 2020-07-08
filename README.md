@@ -34,10 +34,12 @@
 * [x] Blog Newsletter
 * [x] Latest Articles
 * [x] Solve form input widgets on comments and newsletter
-* [ ] Profile Model and Images Issue try amazon s3 (static files)
+* [x] SiteMap and SEO
+* [x] Creating feeds for your blog posts RSS Feeds
+* [x] Contact Me
+* [ ] Installing and Configuring PostgreSQL for full text-search engine
 * [ ] Blog Search
-* [ ] SiteMap and SEO
-* [ ] Contact Me
+* [ ] Profile Model and Images Issue try amazon s3 (static files)
 * [ ] Testimonial backends
 * [ ] Web Caching
 

@@ -175,7 +175,7 @@
                             </div>
                         {% endif %}
 
-
+                        
                         <!-- {% if new_suggestion == None %}
                         <div class="card mb-4 orange text-center wow fadeIn">
                             <div class="mt-3 text-light font-weight-bold">Suggest a topic for me to write about</div>
@@ -202,7 +202,7 @@
                                                     <a href="{{ post.get_absolute_url }}">
                                                         <h5 class="mt-0 mb-1 font-weight-bold text-dark">{{ post.title }}</h5>
                                                     </a>
-                                                    Cras sit amet nibh libero, in gravida nulla
+                                                    {{ post.intro|markdown|truncatewords_html:20 }}
                                                 </div>
                                             </div>
                                         </div>
