@@ -32,10 +32,10 @@
 * [x] SiteMap and SEO
 * [x] Creating feeds for your blog posts RSS Feeds
 * [x] Contact Me -NB Add send mail later v2
+* [ ] Customizing Details
+* [ ] Testimonial backends
 * [ ] Blog Search
 * [ ] Amazon s3 Bucket Static files server(static files)
-* [ ] Testimonial backends
-* [ ] Customizing Details
 * [ ] Refactor
 * [ ] Responsive Design
 

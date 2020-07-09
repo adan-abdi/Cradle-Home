@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 
-from .models import Post, Comment, Profile, Suggest, Contactme, Category
+from .models import Post, Comment, Profile, Suggest, Contactme, Category, Testimonial
 
 admin.site.site_header = 'Portfolio administration'
 admin.site.unregister(Group)
 
 admin.site.register(Profile)
 admin.site.register(Category)
+admin.site.register(Testimonial)
 
 # Post Model
 @admin.register(Post)

@@ -32,7 +32,16 @@ class ContactmeForm(forms.ModelForm):
         fields = ('name', 'email','message')
 
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'email': forms.TextInput(attrs={'class': 'form-control'}),
-            'message': forms.Textarea(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Name',
+                }),
+            'email': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'email',
+                }),
+            'message': forms.Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Message',
+                }),
         }

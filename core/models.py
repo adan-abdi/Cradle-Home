@@ -127,3 +127,19 @@ class Contactme(models.Model):
     
     class Meta:
         ordering = ('-created',)
+
+
+
+class Testimonial(models.Model):
+    name = models.CharField(max_length=80)
+    testimony = models.TextField()
+    image = models.ImageField(max_length=255, upload_to="testimonies", null=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+
+    def __str__(self):
+        return self.name
+
+    
+    class Meta:
+        ordering = ('-created',)
