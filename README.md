@@ -1,6 +1,6 @@
 # Personal Website
 
-## Features: Stable Version
+## Features: Stable Version V1
 
 * [x] Portfolio Homepage
 * [x] Standard Blog
@@ -15,11 +15,6 @@
 * [x] Add Favicon
 * [x] Stack Section
 * [x] Why Choose Us Section
-* [ ] Responsive Design
-* [ ] Refactor
-* [ ] Customize Images
-
-* Accessibility Features
 * [x] Scroll To Top Button
 * [x] Social Icons Left Hover
 * [x] Custom Sidebar
@@ -36,12 +31,13 @@
 * [x] Solve form input widgets on comments and newsletter
 * [x] SiteMap and SEO
 * [x] Creating feeds for your blog posts RSS Feeds
-* [x] Contact Me
-* [ ] Installing and Configuring PostgreSQL for full text-search engine
+* [x] Contact Me -NB Add send mail later v2
 * [ ] Blog Search
-* [ ] Profile Model and Images Issue try amazon s3 (static files)
+* [ ] Amazon s3 Bucket Static files server(static files)
 * [ ] Testimonial backends
-* [ ] Web Caching
+* [ ] Customizing Details
+* [ ] Refactor
+* [ ] Responsive Design
 
 ## Deployment Timeline
 
