@@ -159,15 +159,19 @@
 
                     <!--Grid column-->
                     <div class="col-md-4 mb-4">
-
-                        <div class="mb-3">
-                            <div id="profile-wrapper" class="card card-body h-100">
-                                <img id="profile-pic" src="{% static 'img/banner/banner-image.png' %}" alt="">
-                                <hr>
-                                <h4>Hi, I'm Abdi Adan</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, nam.</p>
+                        
+                            <div class="card mb-4 text-center wow fadeIn">
+                              <!--Card content-->
+                              <div class="card-body">
+                                <img id="profile-pic" class="av-main" src="{% static 'img/pic.jpg' %}" alt="">
+                                <p class="font-weight-bold mt-1">Hi, I'm {{ active_profile.name }}</p>
+                                <p class="font-weight-bold">
+                                  <a class="text-black mr-1"><i class="fas fa-envelope-open-text"></i></a>
+                                  {{ active_profile.email }}
+                                </p>
+                              </div>
                             </div>
-                        </div>
+                        
                         
                         {% if post.tags.all %}
                             <div class="card mb-3 mt-3 justify-content-center">
