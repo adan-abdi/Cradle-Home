@@ -40,12 +40,15 @@
                         <div class="card mb-4 wow fadeIn">
                             <!--Card content-->
                             <div class="card-body text-center">
-                                <p class="h3 my-4"><strong>{{post.title}}</strong></p>
+                                <p class="h3 mt-3"><strong>{{post.title}}</strong></p>
                                 <!-- make author name capitalized -->
                                 <p class=" text-capitalize">
-                                    Created {{ post.created }} <br>
-                                    Published {{ post.publish }} by <strong>{{ post.author }}</strong><br>
-                                    Last Updated {{ post.updated }}
+                                    
+                                    <p class="text-secondary">
+                                        Published {{ post.publish }} by <strong class="text-capitalize">{{ post.author }}</strong>
+                                        <br>
+                                        Last Updated {{ post.updated }}
+                                    </p>
                                 </p>
                                 <!-- add created date, last updated-->
                             </div>
