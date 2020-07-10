@@ -132,7 +132,7 @@ class Contactme(models.Model):
 
 class Testimonial(models.Model):
     name = models.CharField(max_length=80)
-    testimony = models.TextField()
+    testimony = models.TextField(max_length=150)
     image = models.ImageField(max_length=255, upload_to="testimonies", null=True)
     created = models.DateTimeField(auto_now_add=True)
 

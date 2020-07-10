@@ -9,7 +9,7 @@ from django.db.models import Count
 
 
 from .forms import CommentForm, SuggestForm, ContactmeForm
-from .models import Post, Comment, Profile, Suggest, Contactme
+from .models import Post, Comment, Profile, Suggest, Contactme, Testimonial
 
 # Create your views here.
 
@@ -19,6 +19,7 @@ def home(request):
     title = 'Abdi Adan'
     active_profile = Profile.objects.filter(status=True).first()
 
+    testimonial = Testimonial.objects.all()
 
     contact_details = None
     contact = Contactme.objects.all()
@@ -39,7 +40,8 @@ def home(request):
                 'late_posts': late_posts,
                 'contact_details': contact_details,
                 'contact_me_form': contact_me_form,
-                'contact': contact
+                'contact': contact,
+                'testimonial': testimonial
     }
     return render(request, 'index.html', context)
 
