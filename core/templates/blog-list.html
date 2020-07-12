@@ -93,14 +93,14 @@
                                       <!--Banner Image-->
                                       <div class="img img-wrapper">
                                             <a class="">
-                                                <img src="{{ post.banner }}" alt="{{ post.banner }}" class="img-fluid">
+                                                <img src="{{ post.banner }}" alt="{{ post.title }}" class="img-fluid">
                                             </a>
                                       </div>
                                       <!--/.Banner Image-->
                                       {% else %}
                                         <div class="img img-wrapper">
                                             <a class="">
-                                                <img src="{% static 'img/img2.jpg' %}" alt="portfolio-8" class="img-fluid">
+                                                <img src="{% static 'img/blog.png' %}" alt="{{ post.title }}" class="img-fluid">
                                             </a>
                                         </div>
                                       {% endif %}
