@@ -76,14 +76,14 @@
                     </li>
                 </ul>
                 <div class="search mx-5 nav-item d-flex">
-                    <input type="text" class="text-capitalize text-center card" name="box" placeholder="Search my posts...">
-                    <div class="card text-dark btn btn-search">
+                    <input type="text" class="d-none d-lg-block text-capitalize text-center card" name="box" placeholder="Search my posts...">
+                    <div class="d-none d-lg-block card text-dark btn btn-search">
                         <a href="#"><i class="nav-item fa fa-search"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-                <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                <ul class="navbar-nav ml-auto text-capitalize nav-flex-icons p-1 align-items-center">
                     <li class="nav-item mx-2 my-4 ">
                         <a class="nav-link waves-effect font-weight-bold" href="{% url 'core:home' %}">Home<span class="sr-only">(current)</span></a>
                     </li>
@@ -176,9 +176,6 @@
     </script>
     <!-- end of to top js -->
 
-
-
-
     <!-- mdbootstrap cdn scripts -->
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -190,11 +187,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
 
 
+
+
     <!--  Jquery js file  -->
-    <script src="{% static 'js/jquery.3.4.1.js' %}"></script>
+    <!-- <script src="{% static 'js/jquery.3.4.1.js' %}"></script> -->
 
     <!--  Bootstrap js file  -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> -->
 
     <!--  isotope js library  -->
     <script src="{% static 'vendor/isotope/isotope.min.js' %}"></script>

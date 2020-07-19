@@ -13,12 +13,16 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   zoom: 0.9;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* scroll bar */
@@ -78,7 +82,6 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-
 }
 
 .header_area .main-menu .navbar .navbar-brand {
