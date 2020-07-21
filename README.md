@@ -4,7 +4,7 @@
 
 * [x] Portfolio Homepage
 * [x] Standard Blog
-* [x] Advanced Blog
+* [x] Advanced Blog Features
 
 ## FrontEnd-Features
 
@@ -32,17 +32,17 @@
 * [x] SiteMap and SEO
 * [x] Creating feeds for your blog posts RSS Feeds
 * [x] Contact Me -NB Add send mail later v2
-* [ ] Customizing Details
-* [ ] Testimonial backends
+* [x] Customizing Details
+* [x] Testimonial backends
 * [ ] Blog Search
 * [ ] Amazon s3 Bucket Static files server(static files)
-* [ ] Refactor
+* [x] Refactor
 * [ ] Responsive Design
 
 ## Deployment Timeline
 
 * [x] Deploy frontend to git pages
 * [x] Deploy to Heroku as a test Platform
-* [ ] Buy Custom Domain
+* [x] Buy Custom Domain
 * [ ] Deploy to Google Cloud Platform under free tier (GCP)
 * [ ] 🚀Going Live!
