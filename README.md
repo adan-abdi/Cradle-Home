@@ -34,14 +34,14 @@
 * [x] Contact Me -NB Add send mail later v2
 * [x] Customizing Details
 * [x] Testimonial backends
-* [ ] Blog Search
-* [ ] Amazon s3 Bucket Static files server(static files)
+* [x] Blog Search -- Version 2 update Later
+* [ ] Amazon s3 Bucket Static files server(static files) - Google drive
 * [x] Refactor
 * [ ] Responsive Design
 
 ## Deployment Timeline
 
-* [x] Deploy frontend to git pages
+* [x] Deploy frontend to git pages - Taken down for privacy
 * [x] Deploy to Heroku as a test Platform
 * [x] Buy Custom Domain
 * [ ] Deploy to Google Cloud Platform under free tier (GCP)
