@@ -24,6 +24,7 @@
                     <li class="nav-item">
                         <a class="nav-link items" href="{% url 'core:home' %}">Home</a>
                     </li>
+                    {% if title == 'Abdi Adan | Portfolio' %}
                     <li class="nav-item">
                         <a class="nav-link items" href="#services">Services</a>
                     </li>
@@ -37,6 +38,7 @@
                     <li class="nav-item">
                         <a class="nav-link items" href="#testimonials">Testimonials</a>
                     </li>
+                    {% endif %}
                     {% endif %}
                     <li class="nav-item">
                         <a class="nav-link items" href="{% url 'core:post_list' %}">Blog</a>
