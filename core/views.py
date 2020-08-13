@@ -16,7 +16,7 @@ from .models import Post, Comment, Profile, Suggest, Contactme, Testimonial
 # display homepage
 def home(request):
     late_posts = Post.published.annotate(total_comments=Count('comments')).order_by('-total_comments')[:3]
-    title = 'Abdi Adan'
+    title = 'Abdi Adan | Portfolio'
     active_profile = Profile.objects.filter(status=True).first()
 
     testimonial = Testimonial.objects.all()

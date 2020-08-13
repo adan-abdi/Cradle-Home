@@ -82,6 +82,7 @@ button:hover
 .navbar_fixed{
     position: fixed;
     width: 100%;
+    align-items: center;
     left: 0; right: 0;
     box-shadow: 0px 10px 10px rgba(57, 56, 61, 0.205);
     z-index: 999;

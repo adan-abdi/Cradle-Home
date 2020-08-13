@@ -1,15 +1,9 @@
-/* import fonts from fonts.css file */
-@import url(./fonts.css);
-
 /* css variables */
 @import url(./partials/_variables.css);
 
 /* import global styling */
 @import url(./partials/_global.css);
 
-/* *{
-  zoom: 1.1;
-} */
 
 html {
   scroll-behavior: smooth;
@@ -23,6 +17,11 @@ body {
   zoom: 0.9;
   max-width: 100%;
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.txt{
+  font-family: 'Varela Round', sans-serif !important;
 }
 
 /* scroll bar */
@@ -110,6 +109,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.bantext{
+  font-size: 12px !important;
+}
+
+.round{
+  border-radius: 30px;
 }
 
 /* end navigation */
@@ -382,29 +389,42 @@ body {
   padding: 0 2rem;
 }
 
+.sevices-img{
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #080135;
+}
+
 .site-main .services-area .services-title h1 {
   font-size: 25px;
 }
 
 .site-main > .services-area .services {
   border-radius: 5px;
-  min-height: 350px;
-  max-height: 350px;
+  min-height: 400px;
+  max-height: 400px;
   background: #fff;
   padding: 1rem 1rem;
-  width: 16rem;
+  width: 17rem;
   margin: 1rem 0.5rem;
   transition: box-shadow 0.7s ease;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
 }
 
 .site-main > .services-area .services:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.95);
 }
 
 /* End Services Area */
 
 /* Project Area */
+
+.round1{
+  border-radius: 5px;
+}
 
 .site-main .project-area {
   padding: 1rem 0;
@@ -687,121 +707,129 @@ footer.footer-area .social a:hover > i {
   display: block;
 }
 
-/* contact info */
+/* contact */
 
-.contact-info {
-  margin-top: 3rem;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
+.why{
+  height: 70vh;
 }
 
-.section-contact-info {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.box{
+  padding-bottom: 5rem;
 }
 
-.con-card {
-  background: white;
-  margin: 1rem 10px;
-  width: 200;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.request-content{
+  padding-top: 6rem;
+}
+
+.request-content h3{
+  color: #fff; 
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.request-content p{
+  color: #fff;
+}
+
+.form-wrapper{
+  padding-top: 4rem;
+}
+
+.form-wrapper .form-box input {
+  width: 100%;
+  height: 55px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 11px 19px;
   color: white;
-  cursor: pointer;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.95);
-  border-radius: 5px;
+  outline: none;
 }
 
-.con-card-icon {
-  font-size: 28px;
-  background: orange;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px !important;
-  border-radius: 50%;
-  transition: 0.3s linear;
-  align-items: center;
-  justify-content: center;
+.form-wrapper .form-box textarea {
+  width: 100%;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 11px 19px;
+  color: white;
+  outline: none;
 }
 
-.con-card:hover .con-card-icon {
-  background: none;
-  color: orange;
-  transform: scale(1.6);
+.form-box placeholder{
+  color: #fff;
+  margin-left: 1rem;
 }
 
-.con-card:hover {
-  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.95);
+.select-itms{
+  width: 100%;
+  height: 55px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 11px 19px;
+  color:white;
+  line-height: 1.9;
 }
 
-.con-card p {
-  margin-top: 20px;
-  font-weight: 600;
-  max-height: 0;
-  opacity: 0;
-  transition: 0.3s linear;
+.select{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
 }
 
-.con-card:hover p {
-  max-height: 40px;
-  opacity: 1;
+.select-itms::after {
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  height: 9px;
+  width: 9px;
+  margin-top: -4px;
+  right: 21px;
 }
 
-/* end contact info */
+.select-itms.open .list {
+  width: 100%;
+  border-radius: 0;
+}
 
-.contact-form {
+  
+.select-itms .list {
+  width: 100%;
+}
+
+.cta3{
+  color: white !important;
+  border-radius: 30px;
+  border-color: white !important;
+  max-height: 55px;
+  min-height: 55px;
   max-width: 100%;
-  max-height: 90vh;
-  background: orange;
-  padding: 0px 40px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-}
-
-
-
-.hei {
-  height: 100px;
-}
-
-.txtb label {
-  display: block;
-  text-align: left;
-  color: white;
-  text-transform: uppercase;
+  min-width: 100%;
   font-size: 14px;
 }
-.txtb input,
-.txtb textarea {
-  width: 100%;
-  height: 20px;
-  border: none;
-  background: none;
-  outline: none;
-  font-size: 18px;
-  margin-top: 6px;
+
+.cta4{
+  color: white !important;
+  border-radius: 30px;
+  border-color: white !important;
+  max-height: 55px;
+  min-height: 55px;
+  max-width: 100%;
+  min-width: 100%;
+  font-size: 14px;
 }
 
-.btn-sub {
-  padding: 4px 0;
-  color: white;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-top: 8px;
-  width: 50%;
-  font-weight: 500;
+@media only screen and (max-width: 768px) {
+  .heij{
+    height: 63rem;
+  }
 }
+
+
+/* end of contact */
 
 /* timeline */
 .timeline {
@@ -969,7 +997,7 @@ footer.footer-area .social a:hover > i {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  width: 20rem;
+  width: 100%;
   height: 10rem;
   overflow: hidden;
 }
