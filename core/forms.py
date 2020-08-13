@@ -1,7 +1,7 @@
 from django import forms
 
 
-from .models import Comment, Suggest, Contactme
+from .models import Comment, Suggest, Contact
 
 # ModelForm
 class CommentForm(forms.ModelForm):
@@ -26,22 +26,15 @@ class SuggestForm(forms.ModelForm):
             'suggestion': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
-class ContactmeForm(forms.ModelForm):
+class ContactForm(forms.ModelForm):
     class Meta:
-        model = Contactme
-        fields = ('name', 'email','message')
+        model = Contact
+        fields = ('name', 'phone', 'email', 'message', 'service')
 
         widgets = {
-            'name': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Name',
-                }),
-            'email': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'email',
-                }),
-            'message': forms.Textarea(attrs={
-                'class': 'form-control',
-                'placeholder': 'Message',
-                }),
+            'name': forms.TextInput(attrs={'placeholder': "Whats your name?"}),
+            'phone': forms.TextInput(attrs={'placeholder': 'Whats your phone number?',}),
+            'email': forms.TextInput(attrs={'placeholder': 'Whats your email address?',}),
+            'message': forms.Textarea(attrs={"rows":5, "cols":77, 'placeholder': 'Whats your message?',}),
+            'service': forms.TextInput(attrs={'placeholder': 'Whats your service do you want?',}),
         }

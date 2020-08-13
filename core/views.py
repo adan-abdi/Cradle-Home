@@ -8,8 +8,8 @@ from taggit.models import Tag
 from django.db.models import Count
 
 
-from .forms import CommentForm, SuggestForm, ContactmeForm
-from .models import Post, Comment, Profile, Suggest, Contactme, Testimonial
+from .forms import CommentForm, SuggestForm, ContactForm
+from .models import Post, Comment, Profile, Suggest, Contact, Testimonial
 
 # Create your views here.
 
@@ -22,16 +22,16 @@ def home(request):
     testimonial = Testimonial.objects.all()
 
     contact_details = None
-    contact = Contactme.objects.all()
+    contact = Contact.objects.all()
 
     if request.method == 'POST':
         # Contact Me form
-        contact_me_form = ContactmeForm(data=request.POST)
-        if contact_me_form.is_valid():
-            contact_details = contact_me_form.save()
+        contact_form = ContactForm(data=request.POST)
+        if contact_form.is_valid():
+            contact_details = contact_form.save()
             
     else:
-        contact_me_form = CommentForm()
+        contact_form = CommentForm()
 
 
     context = {
@@ -39,7 +39,7 @@ def home(request):
                 'title': title,
                 'late_posts': late_posts,
                 'contact_details': contact_details,
-                'contact_me_form': contact_me_form,
+                'contact_form': contact_form,
                 'contact': contact,
                 'testimonial': testimonial
     }

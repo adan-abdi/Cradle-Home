@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 
-from .models import Post, Comment, Profile, Suggest, Contactme, Category, Testimonial
+from .models import Post, Comment, Profile, Suggest, Contact, Category, Testimonial
 
 admin.site.site_header = 'Portfolio administration'
 admin.site.unregister(Group)
@@ -39,9 +39,9 @@ class SuggestAdmin(admin.ModelAdmin):
 
 
 # Post Model
-@admin.register(Contactme)
-class Contactmedmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'created')
-    list_filter = ('created',)
-    search_fields = ('name', 'email')
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'phone', 'email', 'service', 'created')
+    list_filter = ('created', 'service')
+    search_fields = ('name', 'email', 'service')
     ordering = ('created',)
