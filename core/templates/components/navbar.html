@@ -33,9 +33,11 @@
                     <li class="nav-item">
                         <a class="nav-link items" href="#projects">Projects</a>
                     </li>
+                    {% if testimonial %}
                     <li class="nav-item">
                         <a class="nav-link items" href="#testimonials">Testimonials</a>
                     </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link items" href="{% url 'core:post_list' %}">Blog</a>
                     </li>
