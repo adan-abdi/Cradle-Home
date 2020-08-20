@@ -9,6 +9,9 @@ __pycache__/
 # C extensions
 *.so
 
+# django ORM Migrations
+migrations/
+
 # Distribution / packaging
 .Python
 build/
