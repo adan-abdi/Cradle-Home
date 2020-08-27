@@ -1,7 +1,5 @@
 # Personal Website  
 
-
-[![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
 [![Check-It-Out](https://forthebadge.com/images/badges/check-it-out.svg)](https://cradle-home.herokuapp.com/)
 [![made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) 
