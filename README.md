@@ -9,8 +9,8 @@
 [![Website-Up](https://img.shields.io/badge/Website-Up-success.svg?style=for-the-badge)](https://shields.io/)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-informational.svg?style=for-the-badge)](https://shields.io/)
 [![Release](https://img.shields.io/badge/Released-v2.1.0-yellow.svg?style=for-the-badge)](https://shields.io/)
-[![Release](https://img.shields.io/badge/Issues-1Open-red.svg?style=for-the-badge)](https://shields.io/)
-[![Release](https://img.shields.io/badge/PullRequest-0Open-important.svg?style=for-the-badge)](https://shields.io/)
+[![Release](https://img.shields.io/badge/Issues-1-red.svg?style=for-the-badge)](https://shields.io/)
+[![Release](https://img.shields.io/badge/PRs-0-important.svg?style=for-the-badge)](https://shields.io/)
 [![Release](https://img.shields.io/badge/PRs-Welcome-blueviolet.svg?style=for-the-badge)](https://shields.io/)
 
 ## Features: Stable Version V1
